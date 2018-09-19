@@ -1,0 +1,11 @@
+# nb
+*.ipynb_checkpoints
+
+# compile
+__pycache__
+
+# env
+envdir
+
+# data
+data
