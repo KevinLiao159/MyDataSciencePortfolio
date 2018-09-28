@@ -63,6 +63,10 @@ def train_ALS(train_data, validation_data, maxIter, regParams, ranks):
     regParams: list of float, one dimension of hyper-param tuning grid
 
     ranks: list of float, one dimension of hyper-param tuning grid
+
+    Return
+    ------
+    The best fitted ALS model with lowest RMSE score on validation data
     """
     # initial
     min_error = float('inf')
