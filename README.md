@@ -1,9 +1,6 @@
-# ApiForDataScience: A set of tutorials for advanced machine learning techniques
+# My Data Science Projects
 
-This is a great sample of different common APIs 
-
-
-
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/LICENSE)
 
 ------------------
 
