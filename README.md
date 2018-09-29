@@ -39,8 +39,10 @@
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to my data science 
-This repository is my Data Science projects repository and covers various 
+Welcome to my awesome data science project portfolio. In my repo, you can find awesome and practical solutions to some of the real world business problems with the-state-of-art machine learning and deep learning algorithms. Most of my projects will be demoed in jupyter notebook form. Jupyter notebook is an excellent way to share my work with the world. It comes with markdown and interactive python environment and it is portable to other platforms like Databricks and Google Colaboratory. 
+
+My project collection covers various trending machine learning applications such as Natural Language Processing, Large Scale Machine Learning with Spark, and Recommender System. There are more to come. Potential future projects include Text Summarization, Stock Price Forecast, Trading Strategy with Reinforcement Learning, and Computer Vision
+
 
 
 
