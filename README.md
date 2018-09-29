@@ -1,7 +1,7 @@
 <h1 align="center"> My Data Science Portfolio </h1> <br>
 <p align="center">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio">
-    <img alt="DataScience" title="DataScience" src="https://cdn-images-1.medium.com/max/1600/1*u16a0WbJeckSdi6kGD3gVA.jpeg" width="650" height="300">
+    <img alt="DataScience" title="DataScience" src="https://cdn-images-1.medium.com/max/1600/1*u16a0WbJeckSdi6kGD3gVA.jpeg" width="600" height="300">
   </a>
 </p>
 
