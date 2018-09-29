@@ -96,22 +96,35 @@ Scikit-learn provides a large library for machine learning. The tools for text p
 ### Gensim [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/gensim.ipynb)
 Gensim is the package for topic and vector space modeling, document similarity.
 > Pros:
+  * Works with large datasets and processes data streams
+  * Provides tf-idf vectorization, word2vec, document2vec, Latent Semantic Analysis, Latent Dirichlet Allocation
+  * Supports deep learning
 > Cons:
+  * Designed primarily for unsupervised text modeling
+  * Doesn't have enough tools to provide full NLP pipeline, so should be used with some other library (spaCy or NLTK)
 
-
-### spaCy
-
-
-
-
+### spaCy [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/spacy.ipynb)
+spaCy is the main competitor of the NLTK. These two libraries can be used for the same tasks. spaCy offers a full NLP pipeline (tokenizer, tagger, parser, and NER) through spaCy's container objects such as Doc, Token, Span, and Lexeme. Compared to NLTK, spaCy is more opinionated on the architecture of a NLP pipeline.
+> Pros:
+  * The fastest NLP framework
+  * Easy to learn and use because it has one single highly optimized tool for all tasks
+  * Processes objects; object-oriented
+  * Uses neural networks for training some models
+  * Provides built-in word vectors
+> Cons:
+  * Lacks flexibility, comparing to NLTK
+  * Sentence segmentation is slower than NLTK
+  * Doesn't support many languages
 
 
 
 
 ## EDA & OLAP
+Exploratory Data Analysis (EDA) is an approach to analyzing datasets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. Usually in python or jupyter notebook environment, data scientists use pandas, numpy, matplotlib, seaborn or even plotly to perform EDA.
 
+Online analytical processing (OLAP), is an approach to answering multi-dimensional analytical (MDA) queries swiftly in computing. OLAP is part of the broader category of business intelligence, which also encompasses relational databases, report writing and data mining. In the context of Big Data Analytics (Distributed Computing), data scientists often perform OLAP with SQL query on Apache License Software such as HIVE, Spark, Hadoop.
 
-
+The following are two projects that I have done. One is about San Francisco Crime datasets. The other is Medium Blogpost text datasets.
 
 ### San Francisco Crime Analysis in Apache Spark
 
