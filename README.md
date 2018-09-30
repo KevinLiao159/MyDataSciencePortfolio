@@ -133,25 +133,28 @@ The following are two projects that I have done. One is about San Francisco Crim
 * Train and fine-tune Time Series model to forecast the number of theft incidents per month
 
 ### Medium BlogPost Analysis in Pandas & Seaborn [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/olap/medium_post_analysis_using_pandas.ipynb)
-* Build various chart
-
+* Develop statistical data visualization with seaborn to get summary statistics such as distribution of blogpost's popularity, trends in different blogpost topics, and top n popular topics and blogpost's authors
+* Perform feature engineering to extract features from blogpost's contents, titles, authors, and topics
+* Apply various statistical charts to understand correlation between a blogpost's popularity and its extracted features 
 
 
 
 ## Topic Modeling
+[Topic modeling](https://en.wikipedia.org/wiki/Topic_model) is a type of statistical modeling for discovering the latent “topics” that occur in a collection of documents. Latent Dirichlet Allocation (LDA) is an example of topic model and is used to classify text in a document to a particular topic. It builds a topic per document model and words per topic model, modeled as Dirichlet distributions.
 
+The following projects are using topic model as a text mining tool to discover the latent "topics" in Medium blogposts, as well as trends and popularity of different latent "topics". With topic modeling, we are able to identify insights about what latent 'topics' are trendy and continue to be the most popular content.
 
-
+Medium blogpost datasets are scraped from [Medium](https://medium.com/) using scrapy framework. Details of scrapy implementation is in my another data science project [MediumBlog](https://github.com/KevinLiao159/MediumBlog/tree/master/src/scraper/mediumScraper)
 
 ### NLP and Topic Modeling on Medium BlogPost with Apache Spark
-
-
+* Apply topic modeling to understand what drives a blog post’s popularity (as measured in claps) and the interaction between users’ preferences and blog posts’ contents
+* Build a feature extraction pipeline using Spark, which consists of tokenizing raw texts, stop-words removal, stemming/lemmatization, and BOW/TF-IDF transformation
+* Implement unsupervised learning models of K-means and LDA to discover latent topics embedded in blog posts and identify key words of each topics for clustering and similarity queries
+* Evaluate model’s clustering results by visual displays with dimensionality reduction using PCA and T-SNE
 
 
 ### NLP and Topic Modeling on Medium BlogPost with Sklearn
-
-
-
+* Perform similar tasks like above using sklearn rather than Spark
 
 
 
