@@ -146,14 +146,14 @@ The following projects are using topic model as a text mining tool to discover t
 
 Medium blogpost datasets are scraped from [Medium](https://medium.com/) using scrapy framework. Details of scrapy implementation is in my another data science project [MediumBlog](https://github.com/KevinLiao159/MediumBlog/tree/master/src/scraper/mediumScraper)
 
-### NLP and Topic Modeling on Medium BlogPost with Apache Spark
+### NLP and Topic Modeling on Medium BlogPost with Apache Spark [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/topic_modeling/topic_modeling_using_pyspark.ipynb)
 * Apply topic modeling to understand what drives a blog post’s popularity (as measured in claps) and the interaction between users’ preferences and blog posts’ contents
 * Build a feature extraction pipeline using Spark, which consists of tokenizing raw texts, stop-words removal, stemming/lemmatization, and BOW/TF-IDF transformation
 * Implement unsupervised learning models of K-means and LDA to discover latent topics embedded in blog posts and identify key words of each topics for clustering and similarity queries
 * Evaluate model’s clustering results by visual displays with dimensionality reduction using PCA and T-SNE
 
 
-### NLP and Topic Modeling on Medium BlogPost with Sklearn
+### NLP and Topic Modeling on Medium BlogPost with Sklearn [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/topic_modeling/topic_modeling_using_sklearn.ipynb)
 * Perform similar tasks like above using sklearn rather than Spark
 
 
