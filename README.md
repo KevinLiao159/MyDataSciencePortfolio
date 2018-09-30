@@ -154,15 +154,37 @@ Medium blogpost datasets are scraped from [Medium](https://medium.com/) using sc
 
 
 ### NLP and Topic Modeling on Medium BlogPost with Sklearn [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/topic_modeling/topic_modeling_using_sklearn.ipynb)
-* Perform similar tasks like above using sklearn rather than Spark
+* Perform similar tasks like above but using sklearn rather than Spark
 
 
 
 
 
 ## Recommender System
+A recommender system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas including movies, music, news, social tags, and products in general. Recommender systems typically produce a list of recommendations in one of two ways – through collaborative filtering or through content-based filtering.
 
+> Collaborative filtering
 
+This approach builds a model from a user's past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users. This model is then used to predict items (or ratings for items) that the user may have an interest in
+
+> Content-based filtering
+
+This approach utilizes a series of discrete characteristics of an item in order to recommend additional items with similar properties
+
+> Hybrid Recommender
+
+This one combines the previous two approaches
+
+In my project, I will focus on building a collaborative filtering engine. In collaborative filtering, there are typically following challenges:
+* cold start
+* data sparsity
+* popular bias (how to recommend products from the tail of product distribution)
+* scalability (computation grows as number of users and items grow)
+* pool relationship between like-minded yet sparse users
+
+> Solution
+
+Use matrix factorization technique to reduce dimensionality and sparsity, as well as capturing user information in user latent factors and item information in item latent factors
 
 
 ### Movie Recommendation Engine Development in Apache Spark
