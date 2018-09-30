@@ -11,23 +11,23 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Open Source NLP Libraries Demo](#nlp_intro)
-  - [NLTK](#nltk)
-  - [Scikit-Learn](#sklearn)
-  - [Gensim](#gensim)
-  - [spaCy](#spacy)
-- [EDA & OLAP](#olap)
-  - [San Francisco Crime Analysis in Apache Spark](#crime_analysis)
-  - [Medium BlogPost Analysis in Pandas & Seaborn](#blogpost_analysis)
-- [Topic Modeling](#topic_modeling)
-  - [NLP and Topic Modeling on Medium BlogPost with Apache Spark](#topic_modeling_spark)
-  - [NLP and Topic Modeling on Medium BlogPost with Sklearn](#topic_modeling_sklearn)
-- [Recommender System](#recommender_system)
-  - [Movie Recommendation Engine Development in Apache Spark](#recommender_spark)
-  - [Movie Recommendation Engine Development in Deep Learning with Keras](#recommender_spark)
-- [Future Potential Projects](#TBD)
+- [Open Source NLP Libraries Demo](#open-source-nlp-libraries-demo)
+  - [NLTK](#nltk-demo)
+  - [Scikit-Learn](#scikit-learn-demo)
+  - [Gensim](#gensim-demo)
+  - [spaCy](#spacy-demo)
+- [EDA & OLAP](#eda--olap)
+  - [San Francisco Crime Analysis in Apache Spark](#san-francisco-crime-analysis-in-apache-spark-demo)
+  - [Medium BlogPost Analysis in Pandas & Seaborn](#medium-blogpost-analysis-in-pandas--seaborn-demo)
+- [Topic Modeling](#topic-modeling)
+  - [NLP and Topic Modeling on Medium BlogPost with Apache Spark](#nlp-and-topic-modeling-on-medium-blogpost-with-apache-spark)
+  - [NLP and Topic Modeling on Medium BlogPost with Sklearn](#nlp-and-topic-modeling-on-medium-blogpost-with-sklearn)
+- [Recommender System](#recommender-system)
+  - [Movie Recommendation Engine Development in Apache Spark](#movie-recommendation-engine-development-in-apache-spark)
+  - [Movie Recommendation Engine Development in Deep Learning with Keras](#movie-recommendation-engine-development-in-deep-learning-with-keras)
+- [Future Potential Projects](#future-potential-projects)
 - [Appendix](#appendix)
-  - [Source Code](#source_code)
+  - [Source Code](#source-code)
 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -126,16 +126,14 @@ Online analytical processing (OLAP), is an approach to answering multi-dimension
 
 The following are two projects that I have done. One is about San Francisco Crime datasets. The other is Medium Blogpost text datasets.
 
-### San Francisco Crime Analysis in Apache Spark
+### San Francisco Crime Analysis in Apache Spark [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/olap/crimes_analysis_using_spark.ipynb)
+* Perform analytical operations such as consolidation, drill-down, and slicing and dicing on a 15 year dataset of reported incidents from SFPD
+* Perform spatial and time series analysis to further understand crime pattern and distribution in SF
+* Build data processing pipeline based on Spark RDD, DataFrame, Spark SQL for various OLAP tasks
+* Train and fine-tune Time Series model to forecast the number of theft incidents per month
 
-
-
-
-### Medium BlogPost Analysis in Pandas & Seaborn
-
-
-
-
+### Medium BlogPost Analysis in Pandas & Seaborn [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/olap/medium_post_analysis_using_pandas.ipynb)
+* Build various chart
 
 
 
