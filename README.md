@@ -186,6 +186,19 @@ In my project, I will focus on building a collaborative filtering engine. In col
 
 Use matrix factorization technique to reduce dimensionality and sparsity, as well as capturing user information in user latent factors and item information in item latent factors
 
+> Implementations
+
+I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
+* Alternating Least Squares (ALS) Matrix Factorization
+* Deep Learning Approach
+  * Generalized Matrix Factorization (GMF)
+  * Multi-Layer Perceptron (MLP)
+  * Neural Matrix Factorization (NeuMF)
+
+> Datasets
+
+I use [MovieLens Small Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100004 ratings and 1296 tag applications across 9125 movies.
+
 
 ### Movie Recommendation Engine Development in Apache Spark
 
