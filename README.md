@@ -189,8 +189,8 @@ Use matrix factorization technique to reduce dimensionality and sparsity, as wel
 > Implementations
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
-* Alternating Least Squares (ALS) Matrix Factorization
-* Deep Learning Approach
+* [Alternating Least Squares (ALS) Matrix Factorization](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering)
+* [Neural Collaborative Filtering Approach](https://arxiv.org/pdf/1708.05031.pdf)
   * Generalized Matrix Factorization (GMF)
   * Multi-Layer Perceptron (MLP)
   * Neural Matrix Factorization (NeuMF)
