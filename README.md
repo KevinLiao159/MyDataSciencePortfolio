@@ -199,13 +199,25 @@ I choose to use two types of different ML algos to build two separate movie reco
 
 I use [MovieLens Small Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100004 ratings and 1296 tag applications across 9125 movies.
 
+> Model Performance Comparison on Test Datasets
+
+| MODEL | MEAN SQUARED ERROR | ROOT MEAN SQUARED ERROR |
+| --- | --- | --- |
+| ALS | 0.8475 | 0.9206 |
+| - | - | - |
+| GMF | 0.8532 | 0.9237 |
+| MLP | 0.8270 | 0.9094 |
+| NeuMF | 0.8206 | 0.9059 |
+
 
 ### Movie Recommendation Engine Development in Apache Spark
 
 
 
-### Movie Recommendation Engine Development in Deep Learning with Keras
 
+
+### Movie Recommendation Engine Development in Deep Learning with Keras
+add png for model visualization
 
 
 
