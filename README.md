@@ -257,20 +257,23 @@ print("Root-mean-square error = " + str(rmse))
 
 Before we get into the Keras implementation of Neural Collaborative Filtering (NCF), let's quickly review Matrix Factorization and how it is implemented in the context of Neural Networks.
 
-Here is the illustration of the math
+Here is the illustration of the math:
 ![Matrix factorization](https://cdn-images-1.medium.com/max/2000/1*WrOoSr49lQs43auSsLlLdg.png)
 
 Essentially, each user and item is projected onto a latent space, represented by a latent vector. The more similar the two latent vectors are, the more related the corresponding users’ preference. Since we factorize the user-item matrix into the same latent space, we can measure the similarity of any two latent vectors with cosine-similarity or dot product.
 
-In Neural Network, we will implement an embedding layer. We usually map a user information to a user embedded vector, and map a item information to an item vector. Then we will do a element-wise multiplication between user latent vector and item latent vector. The objective function is to minimize the MSE between the predictions and the ratings. This is exactly how Generalized Matrix Factorization (GMF) is implemented. Below is illustration
+In Neural Network, we will implement an embedding layer. We usually map a user one-hot encoded vector to a user embedded vector, and map a item one-hot encoded vector to an item vector. Then we will do a element-wise multiplication between user latent vector and item latent vector. Now we have a element-wise user-item latent vector. 
+
+In traditional matrix factorization, we would just sum up the vector, which is also the dot product of user latent vector and item latent vector. Then we minimize the loss between the dot product of these two and the true ratings in user-item association matrix
+
+However, in the world of neural network, we can generalize matrix factorization by feeding the element-wise user-item latent vector into FC layer. The Neural FC layer can be any kind neuron connections. With the complicated connection and non-linearity in the Neural CF layers, this model is capable of properly estimating the complex interactions between user and item in the latent space. Then the objective function is to minimize the loss between the predictions and the ratings. This is exactly how Generalized Matrix Factorization (GMF) is implemented. Below is the graph of network architecture:
 ![Generalized Matrix Factorization (GMF)](https://cdn-images-1.medium.com/max/2000/1*EA03sZsfJ4wu8yMoU6xwPQ.png)
 
+To further generalize the process of matrix factorization in neural network, we need to increase the complexity in hypothesis space of the network and remove calucation rules from the neural topology. This means we will remove the element-wise multiplication layer and add more Neural CF layers, for example, multiple layer perceptron (MLP), can be placed after the concat layer of user and item embedded layers. And this is the Multi-Layer Perceptron (MLP) model. Below is the graph of network architecture:
 ![Multi-Layer Perceptron (MLP)](https://cdn-images-1.medium.com/max/1600/1*sTBtqrsQzTKlZ8hSU7I6FQ.png)
+
+Now that we understand how generalized matrix factorization works in the world of neural network, the next question is how we can improve the model. One simple trick that is often used in Machine Learning competition is "stacking". In neural networks, "stacking" means we concat the outputs of GMF and MLP networks and connect it with the sigmoid activation output layer. And this is Neural Matrix Factorization (NeuMF). Below is the graph of network architecture:
 ![Neural Matrix Factorization (NeuMF)](https://cdn-images-1.medium.com/max/1600/1*CoETyuU36fshduKAfFhCrg.png)
-
-add png for model visualization
-
-
 
 
 
