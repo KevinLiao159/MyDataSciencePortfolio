@@ -189,7 +189,7 @@ Use matrix factorization technique to reduce dimensionality and sparsity, as wel
 > Implementations
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
-* [Alternating Least Squares (ALS) Matrix Factorization](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering)
+* [Alternating Least Square (ALS) Matrix Factorization](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering)
 * [Neural Collaborative Filtering Approach](https://arxiv.org/pdf/1708.05031.pdf)
   * Generalized Matrix Factorization (GMF)
   * Multi-Layer Perceptron (MLP)
@@ -210,9 +210,34 @@ I use [MovieLens Small Datasets](https://grouplens.org/datasets/movielens/latest
 | NeuMF | 0.8206 | 0.9059 |
 
 
-### Movie Recommendation Engine Development in Apache Spark
+### Movie Recommendation Engine Development in Apache Spark [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+In the context of distributed computing and large scale machine learning, Alternating Least Square (ALS) in Spark ML is definitely the one of the first go-to models for collaborative filtering in recommender system. ALS algo has been proven to be very effective for both explicit and implicit feedback datasets. In addition, [Alternating Least Squares with Weighted λ Regularization (ALS-WR)](https://endymecy.gitbooks.io/spark-ml-source-analysis/content/%E6%8E%A8%E8%8D%90/papers/Large-scale%20Parallel%20Collaborative%20Filtering%20the%20Netflix%20Prize.pdf) is a parallel algorithm designed for a large-scale collaborative filtering challenge, the Netflix Prize. This method is meant to resolve scalability and sparseness of the user profiles, and it's simple and scales well to very large datasets
 
 
+My implementation to conduct model selection according to cross-val hyperparam tuning
+```
+from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.recommendation import ALS
+from pyspark.sql import Row
+
+lines = spark.read.text("data/mllib/als/sample_movielens_ratings.txt").rdd
+parts = lines.map(lambda row: row.value.split("::"))
+ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), movieId=int(p[1]),
+                                     rating=float(p[2]), timestamp=long(p[3])))
+ratings = spark.createDataFrame(ratingsRDD)
+(training, test) = ratings.randomSplit([0.8, 0.2])
+
+# Build the recommendation model using ALS on the training data
+als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating")
+model = als.fit(training)
+
+# Evaluate the model by computing the RMSE on the test data
+predictions = model.transform(test)
+evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",
+                                predictionCol="prediction")
+rmse = evaluator.evaluate(predictions)
+print("Root-mean-square error = " + str(rmse))
+```
 
 
 
