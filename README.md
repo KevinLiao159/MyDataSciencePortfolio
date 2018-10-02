@@ -272,7 +272,7 @@ However, in the world of neural network, we can generalize matrix factorization 
 To further generalize the process of matrix factorization in neural network, we need to increase the complexity in hypothesis space of the network and remove calucation rules from the neural topology. This means we will remove the element-wise multiplication layer and add more Neural CF layers, for example, multiple layer perceptron (MLP), can be placed after the concat layer of user and item embedded layers. And this is the Multi-Layer Perceptron (MLP) model. Below is the graph of network architecture:
 ![Multi-Layer Perceptron (MLP)](https://cdn-images-1.medium.com/max/1600/1*sTBtqrsQzTKlZ8hSU7I6FQ.png)
 
-Now that we understand how generalized matrix factorization works in the world of neural network, the next question is how we can improve the model. One simple trick that is often used in Machine Learning competition is "stacking". In neural networks, "stacking" means we concat the outputs of GMF and MLP networks and connect it with the sigmoid activation output layer. And this is Neural Matrix Factorization (NeuMF). Below is the graph of network architecture:
+Now that we understand how generalized matrix factorization works in the world of neural network, the next question is how we can improve the model. One simple trick that is often used in Machine Learning competitions is "stacking". In neural networks, "stacking" means we concat the outputs of GMF and MLP networks and connect it with the sigmoid activation output layer. And this is Neural Matrix Factorization (NeuMF). Below is the graph of network architecture:
 ![Neural Matrix Factorization (NeuMF)](https://cdn-images-1.medium.com/max/1600/1*CoETyuU36fshduKAfFhCrg.png)
 
 
