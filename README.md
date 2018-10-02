@@ -230,12 +230,15 @@ from pyspark.ml.evaluation import RegressionEvaluator
 # config
 SEED = 99
 MAX_ITER = 10
+SPLIT_RATIO = [6, 2, 2]
 DATAPATH = './data/movie/ratings.csv'
 
-# construct my data set object
-my_data = Dataset(spark, DATAPATH)
+# construct movie ratings dataset object
+rating_data = Dataset(spark, DATAPATH)
+# get rating data as Spark RDD
+rating_rdd = rating_data.RDD
 # get train, validation, and test data
-train_data, validation_data, test_data = my_data.split_data(my_data.RDD, [6, 2, 2], SEED)
+train_data, validation_data, test_data = rating_data.split_data(rating_rdd, SPLIT_RATIO, SEED)
 # create a hyperparam tuning grid
 regParams = [0.05, 0.1, 0.2, 0.4, 0.8]
 ranks = [6, 8, 10, 12, 14]
@@ -248,8 +251,6 @@ evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",
 rmse = evaluator.evaluate(predictions)
 print("Root-mean-square error = " + str(rmse))
 ```
-
-
 
 ### Movie Recommendation Engine Development in Deep Learning with Keras
 add png for model visualization
