@@ -213,26 +213,34 @@ I use [MovieLens Small Datasets](https://grouplens.org/datasets/movielens/latest
 ### Movie Recommendation Engine Development in Apache Spark [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
 In the context of distributed computing and large scale machine learning, Alternating Least Square (ALS) in Spark ML is definitely the one of the first go-to models for collaborative filtering in recommender system. ALS algo has been proven to be very effective for both explicit and implicit feedback datasets. In addition, [Alternating Least Squares with Weighted λ Regularization (ALS-WR)](https://endymecy.gitbooks.io/spark-ml-source-analysis/content/%E6%8E%A8%E8%8D%90/papers/Large-scale%20Parallel%20Collaborative%20Filtering%20the%20Netflix%20Prize.pdf) is a parallel algorithm designed for a large-scale collaborative filtering challenge, the Netflix Prize. This method is meant to resolve scalability and sparseness of the user profiles, and it's simple and scales well to very large datasets
 
+* Advantages of collaborative filtering over content based methods
+  * No need to know about item content
+  * "Item cold-start" problem is avoided
+  * User interest may change over time
+  * Explainability
 
-My implementation to conduct model selection according to cross-val hyperparam tuning
-```
+* My implementation to train the best ALS model via cross-validation and hyperparam-tuning
+
+```python
+from src.spark_recommender_system import Dataset, train_ALS
 from pyspark.ml.evaluation import RegressionEvaluator
-from pyspark.ml.recommendation import ALS
-from pyspark.sql import Row
 
-lines = spark.read.text("data/mllib/als/sample_movielens_ratings.txt").rdd
-parts = lines.map(lambda row: row.value.split("::"))
-ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), movieId=int(p[1]),
-                                     rating=float(p[2]), timestamp=long(p[3])))
-ratings = spark.createDataFrame(ratingsRDD)
-(training, test) = ratings.randomSplit([0.8, 0.2])
+# config
+SEED = 99
+MAX_ITER = 10
+DATAPATH = './data/movie/ratings.csv'
 
-# Build the recommendation model using ALS on the training data
-als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating")
-model = als.fit(training)
-
-# Evaluate the model by computing the RMSE on the test data
-predictions = model.transform(test)
+# construct my data set object
+my_data = Dataset(spark, DATAPATH)
+# get train, validation, and test data
+train_data, validation_data, test_data = my_data.split_data(my_data.RDD, [6, 2, 2], SEED)
+# create a hyperparam tuning grid
+regParams = [0.05, 0.1, 0.2, 0.4, 0.8]
+ranks = [6, 8, 10, 12, 14]
+# train models and select the best model in hyperparam tuning
+best_model = train_ALS(train_data, validation_data, MAX_ITER, regParams, ranks)
+# test model
+predictions = best_model.transform(test_data)
 evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",
                                 predictionCol="prediction")
 rmse = evaluator.evaluate(predictions)
