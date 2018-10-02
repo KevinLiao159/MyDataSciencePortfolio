@@ -252,7 +252,22 @@ rmse = evaluator.evaluate(predictions)
 print("Root-mean-square error = " + str(rmse))
 ```
 
-### Movie Recommendation Engine Development in Deep Learning with Keras
+### Movie Recommendation Engine Development in Neural Networks with Keras [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
+[Neural Collaborative Filtering (NCF)]((https://arxiv.org/pdf/1708.05031.pdf)) is a paper published by National University of Singapore, Columbia University, Shandong University, and Texas A&M University in 2017. It utilizes the flexibility, complexity, and non-linearity of Neural Network to build a recommender system. It proves that Matrix Factorization, a traditional recommender system, is a special case of Neural Collaborative Filtering. In addition, it shows that NCF outperforms the state-of-the-art models in two public datasets
+
+Before we get into the Keras implementation of Neural Collaborative Filtering (NCF), let's quickly review Matrix Factorization and how it is implemented in the context of Neural Networks.
+
+Here is the illustration of the math
+![Matrix factorization](https://cdn-images-1.medium.com/max/2000/1*WrOoSr49lQs43auSsLlLdg.png)
+
+Essentially, each user and item is projected onto a latent space, represented by a latent vector. The more similar the two latent vectors are, the more related the corresponding users’ preference. Since we factorize the user-item matrix into the same latent space, we can measure the similarity of any two latent vectors with cosine-similarity or dot product.
+
+In Neural Network, we will implement an embedding layer. We usually map a user information to a user embedded vector, and map a item information to an item vector. Then we will do a element-wise multiplication between user latent vector and item latent vector. The objective function is to minimize the MSE between the predictions and the ratings. This is exactly how Generalized Matrix Factorization (GMF) is implemented. Below is illustration
+![Generalized Matrix Factorization (GMF)](https://cdn-images-1.medium.com/max/2000/1*EA03sZsfJ4wu8yMoU6xwPQ.png)
+
+![Multi-Layer Perceptron (MLP)](https://cdn-images-1.medium.com/max/1600/1*sTBtqrsQzTKlZ8hSU7I6FQ.png)
+![Neural Matrix Factorization (NeuMF)](https://cdn-images-1.medium.com/max/1600/1*CoETyuU36fshduKAfFhCrg.png)
+
 add png for model visualization
 
 
