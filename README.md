@@ -275,7 +275,86 @@ To further generalize the process of matrix factorization in neural network, we 
 Now that we understand how generalized matrix factorization works in the world of neural network, the next question is how we can improve the model. One simple trick that is often used in Machine Learning competitions is "stacking". In neural networks, "stacking" means we concat the outputs of GMF and MLP networks and connect it with the sigmoid activation output layer. And this is Neural Matrix Factorization (NeuMF). Below is the graph of network architecture:
 ![Neural Matrix Factorization (NeuMF)](https://cdn-images-1.medium.com/max/1600/1*CoETyuU36fshduKAfFhCrg.png)
 
+* My implementation to build Neural Matrix Factorization (NeuMF) and train the model
 
+
+```python
+import pandas as pd
+from src.neural_recommender_system import (get_GMF_model,
+                                           get_MLP_model,
+                                           get_NeuMF_model,
+                                           train_model,
+                                           load_trained_model)
+# data config
+DATAPATH = './data/movie/ratings.csv'
+MODELPATH = './data/movie/tmp/model.hdf5'
+SEED = 99
+TEST_SIZE = 0.2
+
+# model config
+EMBEDDED_DIM = 10
+L2_REG = 0
+MLP_HIDDEN_LAYERS = [64, 32, 16, 8]
+
+# trainer config
+OPTIMIZER = 'adam'
+BATCH_SIZE = 64
+EPOCHS = 30
+VAL_SPLIT = 0.25
+
+# load ratings
+df_ratings = pd.read_csv(
+    DATAPATH,
+    usecols=['userId', 'movieId', 'rating'],
+    dtype={'userId': 'int32', 'movieId': 'int32', 'rating': 'float32'})
+
+# get total number of users and items
+num_users = len(df_ratings.userId.unique())
+num_items = len(df_ratings.movieId.unique())
+
+# train/test split
+df_train, df_test = train_test_split(df_ratings, TEST_SIZE, SEED)
+
+# build Generalized Matrix Factorization (GMF)
+GMF_model = get_GMF_model(num_users, num_items, EMBEDDED_DIM, L2_REG, L2_REG)
+
+# build Multi-Layer Perceptron (MLP)
+MLP_model = get_MLP_model(num_users, num_items, 
+                          MLP_HIDDEN_LAYERS, [L2_REG for i in range(4)])
+
+# build Neural Matrix Factorization (NeuMF)
+NeuMF_model = get_NeuMF_model(num_users, num_items, EMBEDDED_DIM,
+                              (L2_REG, L2_REG), MLP_HIDDEN_LAYERS, 
+                              [L2_REG for i in range(4)])
+
+# let's just train Neural Matrix Factorization (NeuMF)
+train_model(NeuMF_model, OPTIMIZER, BATCH_SIZE, EPOCHS, VAL_SPLIT, 
+            inputs=[df_train.userId.values, df_train.movieId.values], 
+            outputs=df_train.rating.values,
+            filepath=MODELPATH)
+
+# load the best trained model
+# rebuild
+NeuMF_model = get_NeuMF_model(num_users, num_items, EMBEDDED_DIM,
+                              (L2_REG, L2_REG), MLP_HIDDEN_LAYERS, 
+                              [L2_REG for i in range(4)])
+# load weights
+NeuMF_model = load_trained_model(NeuMF_model, MODELPATH)
+
+# define metric - rmse
+rmse = lambda true, pred: np.sqrt(
+  np.mean(
+    np.square(
+      np.squeeze(predictions) - np.squeeze(df_test.rating.values)
+    )
+  )
+)
+
+# test model
+predictions = NeuMF_model.predict([df_test.userId.values, df_test.movieId.values])
+error = rmse(df_test.rating.values, predictions)
+print('The out-of-sample RMSE of rating predictions is', round(error, 4))
+```
 
 
 ## Future Potential Projects

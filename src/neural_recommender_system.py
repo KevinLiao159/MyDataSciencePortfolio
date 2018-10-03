@@ -260,3 +260,8 @@ def train_model(model, learner,
                         validation_split=val_split,
                         callbacks=[early_stopper, model_saver])
     return history
+
+
+def load_trained_model(model, weights_path):
+    model.load_weights(weights_path)
+    return model
