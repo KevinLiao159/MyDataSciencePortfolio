@@ -11,20 +11,27 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Open Source NLP Libraries Demo](#open-source-nlp-libraries-demo)
-  - [NLTK](#nltk-demo)
-  - [Scikit-Learn](#scikit-learn-demo)
-  - [Gensim](#gensim-demo)
-  - [spaCy](#spacy-demo)
-- [EDA & OLAP](#eda--olap)
-  - [San Francisco Crime Analysis in Apache Spark](#san-francisco-crime-analysis-in-apache-spark-demo)
-  - [Medium BlogPost Analysis in Pandas & Seaborn](#medium-blogpost-analysis-in-pandas--seaborn-demo)
-- [Topic Modeling](#topic-modeling)
-  - [NLP and Topic Modeling on Medium BlogPost with Apache Spark](#nlp-and-topic-modeling-on-medium-blogpost-with-apache-spark-demo)
-  - [NLP and Topic Modeling on Medium BlogPost with Sklearn](#nlp-and-topic-modeling-on-medium-blogpost-with-sklearn-demo)
-- [Recommender System](#recommender-system)
-  - [Movie Recommendation Engine Development in Apache Spark](#movie-recommendation-engine-development-in-apache-spark-demo)
-  - [Movie Recommendation Engine Development in Deep Learning with Keras](#movie-recommendation-engine-development-in-deep-learning-with-keras-demo)
+
+- [Medium Blogpost](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/medium_blogpost)
+  - [Exploratory Data Analysis with Seaborn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/medium_post_analysis_using_pandas.ipynb)
+  - [Topic Modeling on Medium BlogPost with Sklearn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_sklearn.ipynb)
+  - [Topic Modeling on Medium BlogPost with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_pyspark.ipynb)
+
+- [Recommender System](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system)
+  - [Movie Recommendation Engine Development with Matrix Factorization]
+  (#TODO)
+  - [Movie Recommendation Engine Development in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+  - [Movie Recommendation Engine Development in Deep Learning with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
+
+- [San Francisco Crime Study](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/sf_crime_study)
+  - [San Francisco Crime Analysis with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/sf_crime_study/crimes_analysis_using_spark.ipynb)
+
+- [Useful NLP Libraries](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/useful_nlp)
+  - [NLTK](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/nltk.ipynb)
+  - [Scikit-Learn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/sklearn.ipynb)
+  - [Gensim](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/gensim.ipynb)
+  - [spaCy](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/spacy.ipynb)
+
 - [Future Potential Projects](#future-potential-projects)
 - [Appendix](#appendix)
   - [Source Code](#source-code)
@@ -32,20 +39,27 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Introduction
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/KevinLiao159/MyDataSciencePortfolio)
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to my awesome data science project portfolio. In my repo, you can find awesome and practical solutions to some of the real world business problems with the-state-of-art machine learning and deep learning algorithms. Most of my projects will be demoed in jupyter notebook form. Jupyter notebook is an excellent way to share my work with the world. It comes with markdown and interactive python environment and it is portable to other platforms like Databricks and Google Colaboratory as well. 
+Welcome to my awesome data science project portfolio. In my repo, you can find awesome and practical solutions to some of the real world business problems with statistical methods and the-state-of-art machine learning models. Most of my projects will be demoed in jupyter notebook. Jupyter notebook is an excellent way to share my work with the world. It comes with markdown and interactive python environment and it is portable to other platforms like Databricks and Google Colaboratory as well.
 
-My project collection covers various trending machine learning applications such as Natural Language Processing, Large Scale Machine Learning with Spark, and Recommender System. There are more to come. Potential future projects include Text Summarization, Stock Price Forecast, Trading Strategy with Reinforcement Learning, and Computer Vision.
+My project collection covers various trending machine learning applications such as *Natural Language Processing*, *Large Scale Machine Learning with Spark*, and *Recommender System*. There are more to come. Potential future projects include *Text Summarization*, *Stock Price Forecast*, *Trading Strategy with Reinforcement Learning*, and *Computer Vision*.
+
+
+## Medium Blogpost
+Medium is a popular blogpost publishing platform with enormous amount of contents and text data. What are people publishing? What are the latent topics in those blogposts? What makes a blogpost popular? And what is the trend in today's Technology? This project aims to answer the questions through visualization, analysis, natural language process, and machine learning techniques.
+
+Specifically, we will use *Seaborn* and *Pandas* for exploratory analysis
+
+## Recommender System
 
 
 
-## Open Source NLP Libraries Demo
+## Open Source NLP Libraries
 Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
 
 I believe we are still at an early stage of NLP development. However, NLP at current stage is already able to perform many tasks. The following is a list of most commonly researched tasks in natural language processing. Note that some of these tasks have direct real-world applications.
@@ -71,50 +85,6 @@ Semantics Challenges
 There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are Natrual Language ToolKit (NLTK), spaCy, sklearn NLP toolkit, gensim, Pattern, polyglot and many others. However, I only select four of them for demo.
 
 
-### NLTK [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/nltk.ipynb)
-NLTK (Natural Language Toolkit) is used for such tasks as tokenization, lemmatization, stemming, parsing, POS tagging, etc. This library has tools for almost all NLP tasks. 
-> Pros:
-  * The earliest python NLP libraries and the most well-known full NLP library
-  * Many third-party extensions
-  * Supports the largest number of languages
-> Cons:
-  * Complicated to learn
-  * Slow
-  * Doesn't provide neural network models
-  * No integrated word vectors
-
-### Scikit-Learn [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/sklearn.ipynb)
-Scikit-learn provides a large library for machine learning. The tools for text preprocessing are also presented here. 
-> Pros:
-  * Many functions to use bag-of-words method of creating features for text classification tasks
-  * Provides a wide varity of algorithms to build ML models
-  * Good documentation
-> Cons:
-  * Doesn't have sophisticated preprocessing things like pos-taggin, parsing, and NER
-  * Doesn't use neural network models
-
-### Gensim [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/gensim.ipynb)
-Gensim is the package for topic and vector space modeling, document similarity.
-> Pros:
-  * Works with large datasets and processes data streams
-  * Provides tf-idf vectorization, word2vec, document2vec, Latent Semantic Analysis, Latent Dirichlet Allocation
-  * Supports deep learning
-> Cons:
-  * Designed primarily for unsupervised text modeling
-  * Doesn't have enough tools to provide full NLP pipeline, so should be used with some other library (spaCy or NLTK)
-
-### spaCy [(DEMO)](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/nlp_intro/spacy.ipynb)
-spaCy is the main competitor of the NLTK. These two libraries can be used for the same tasks. spaCy offers a full NLP pipeline (tokenizer, tagger, parser, and NER) through spaCy's container objects such as Doc, Token, Span, and Lexeme. Compared to NLTK, spaCy is more opinionated on the architecture of a NLP pipeline.
-> Pros:
-  * The fastest NLP framework
-  * Easy to learn and use because it has one single highly optimized tool for all tasks
-  * Processes objects; object-oriented
-  * Uses neural networks for training some models
-  * Provides built-in word vectors
-> Cons:
-  * Lacks flexibility, comparing to NLTK
-  * Sentence segmentation is slower than NLTK
-  * Doesn't support many languages
 
 
 
