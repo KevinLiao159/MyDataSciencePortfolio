@@ -53,7 +53,7 @@ My project collection covers various trending machine learning applications such
 ## Medium Blogpost
 Medium is a popular blogpost publishing platform with enormous amount of contents and text data. What are people publishing? What are the latent topics in those blogposts? What makes a blogpost popular? And what is the trend in today's Technology? This project aims to answer the questions through visualization, analysis, natural language process, and machine learning techniques.
 
-Specifically, we will use *Seaborn* and *Pandas* for exploratory analysis
+Specifically, we will use **Seaborn** and *Pandas* for exploratory analysis
 
 ## Recommender System
 
