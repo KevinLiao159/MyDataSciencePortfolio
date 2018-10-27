@@ -53,9 +53,14 @@ My project collection covers various trending machine learning applications such
 ## Medium Blogpost
 Medium is a popular blogpost publishing platform with enormous amount of contents and text data. What are people publishing? What are the latent topics in those blogposts? What makes a blogpost popular? And what is the trend in today's Technology? This project aims to answer the questions through visualization, analysis, natural language process, and machine learning techniques.
 
-Specifically, we will use **Seaborn** and *Pandas* for exploratory analysis
+Specifically, I will use **Seaborn** and **Pandas** for exploratory analysis. For machine learning modeling, I choose **K-means**, **tSVD**, and **LatentDirichletAllocation** for topic modeling. I will perform this study with two different ML framework: **Sklearn** and **Spark**.
+
+**Sklearn** is a great python machine learning library for data scientist. However, in the age of Big Data, distributed computing system becomes a necessary tool for conducting big data analytics. And **Spark** is distributed cluster-computing framework and provides an interface for programming entire clusters with implicit data parallelism and fault tolerance.
+
 
 ## Recommender System
+Most 
+
 
 
 
