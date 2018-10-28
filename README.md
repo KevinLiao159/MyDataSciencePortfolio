@@ -53,14 +53,15 @@ Welcome to my awesome data science project portfolio. In my repo, you can find a
 My project collection covers various trending machine learning applications such as *Natural Language Processing*, *Large Scale Machine Learning with Spark*, and *Recommender System*. There are more to come. Potential future projects include *Text Summarization*, *Stock Price Forecast*, *Trading Strategy with Reinforcement Learning*, and *Computer Vision*.
 
 ## Customer Churn Study
-<p align="center">
+<p align="left">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/churn_study">
-    <img alt="Customer Churn Study" title="Customer Churn Study" src="https://glideconsultingllc.com/wp-content/uploads/2017/02/customer-journey.png" width="600" height="300">
+    <img alt="Customer Churn Study" title="Customer Churn Study" src="https://glideconsultingllc.com/wp-content/uploads/2017/02/customer-journey.png">
   </a>
-Churn rate is one of the important business metrics. A company can compare its churn and growth rates to determine if there was overall growth or loss. When the churn rate is higher than the growth rate, the company has experienced a loss in its customer base.
 
-Why customers churn and stop using a company's services? What is the estimate amount of churn for next quarter? Being able to answer above two questions can provide meaningful insights about what direction the company is currently heading towards and how the company can improve its products and services so that constomers would stay. 
+  Churn rate is one of the important business metrics. A company can compare its churn and growth rates to determine if there was overall growth or loss. When the churn rate is higher than the growth rate, the company has experienced a loss in its customer base.
 
+  Why customers churn and stop using a company's services? What is the estimate amount of churn for next quarter? Being able to answer above two questions can provide meaningful insights about what direction the company is currently heading towards and how the company can improve its products and services so that constomers would stay. 
+</p>
 
 ## Medium Blogpost
 Medium is a popular blogpost publishing platform with enormous amount of contents and text data. What are people publishing? What are the latent topics in those blogposts? What makes a blogpost popular? And what is the trend in today's Technology? This project aims to answer the questions through visualization, analysis, natural language process, and machine learning techniques.
