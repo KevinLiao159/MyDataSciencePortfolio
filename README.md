@@ -61,41 +61,29 @@ Specifically, I will use **Seaborn** and **Pandas** for exploratory analysis. Fo
 ## Recommender System
 Most products we use today are powered by recommendation engines. Youtube, Netflix, Amazon, Pinterest, and long list of other data products all rely on recommendation engines to filter millions of contents and make personalized recommendations to their users.
 
-It'd be so cool to build a recommender system myself. In generaly, recommender systems can be loosely broken down into three categories: *content based systems*, *collaborative filtering systems*, and *hybrid systems* (which use a combination of the other two).
+It'd be so cool to build a recommender system myself. In generaly, recommender systems can be loosely broken down into three categories: **content based systems**, **collaborative filtering systems**, and **hybrid systems** (which use a combination of the other two).
 
 My project focuses on collaborative filtering systems. Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user based or item based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
+
+However, both item-based and user-based collaborative filtering still face following challenges:
+* cold start
+* data sparsity
+* popular bias (how to recommend products from the tail of product distribution)
+* scalability
+
+To overcome above challenges, I will use **Matrix Factorization** to learn latent features and interaction between users and items 
 
 
 ## San Francisco Crime Study
 San Francisco has been arising as one the most expensive city to reside. More and more startups and companies move in the city and attracts more and more talents into the city. However, the crime incidents seem to rise up as the average income of its residents too. Car break-ins hit 'epidemic' levels in San Francisco. 
 
-In this study, I will use spark to analyze a 15-year reported incidents dataset from SFPD, and use machine learning methods to understand crime pattern and distribution in SF. Lastly, I will build a time-series forecast model to forecast crime rate
+In this study, I will use **Spark** to analyze a 15-year reported incidents dataset from SFPD, and use machine learning methods to understand crime pattern and distribution in SF. Lastly, I will build a time-series forecast model to forecast crime rate
 
 
 ## Useful Open Source NLP Libraries
 Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
 
-I believe we are still at an early stage of NLP development. However, NLP at current stage is already able to perform many tasks. The following is a list of most commonly researched tasks in natural language processing. Note that some of these tasks have direct real-world applications.
-
-Syntax Challenges
-  * Sentence breaking
-  * Word segmentation
-  * Morphological segmentation
-  * Stemming and Lemmatization
-  * Part-of-speech tagging
-  * Terminology extraction
-
-Semantics Challenges
-  * Named entity recognition (NER)
-  * Relationship extraction
-  * Topic segmentation and recognition
-  * Sentiment analysis
-  * Machine translation
-  * Natural language generation
-  * Question answering
-  * Natural language understanding
-
-There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are Natrual Language ToolKit (NLTK), spaCy, sklearn NLP toolkit, gensim, Pattern, polyglot and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
+There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are **Natrual Language ToolKit (NLTK)**, **spaCy**, **sklearn NLP toolkit**, **gensim**, **Pattern**, **polyglot** and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
 
 
 ## Future Potential Projects
