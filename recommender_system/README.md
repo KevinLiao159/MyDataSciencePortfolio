@@ -152,7 +152,7 @@ from src.neural_recommender_system import (get_GMF_model,
                                            load_trained_model)
 # data config
 DATAPATH = './data/movie/ratings.csv'
-MODELPATH = './data/movie/tmp/model.hdf5'
+# MODELPATH = './data/movie/tmp/model.hdf5'
 SEED = 99
 TEST_SIZE = 0.2
 
@@ -203,8 +203,8 @@ train_model(NeuMF_model, OPTIMIZER, BATCH_SIZE, EPOCHS, VAL_SPLIT,
 NeuMF_model = get_NeuMF_model(num_users, num_items, EMBEDDED_DIM,
                               (L2_REG, L2_REG), MLP_HIDDEN_LAYERS, 
                               [L2_REG for i in range(4)])
-# load weights
-NeuMF_model = load_trained_model(NeuMF_model, MODELPATH)
+# # load weights
+# NeuMF_model = load_trained_model(NeuMF_model, MODELPATH)
 
 # define metric - rmse
 rmse = lambda true, pred: np.sqrt(
