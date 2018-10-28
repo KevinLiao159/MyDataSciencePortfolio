@@ -53,17 +53,23 @@ Welcome to my awesome data science project portfolio. In my repo, you can find a
 My project collection covers various trending machine learning applications such as *Natural Language Processing*, *Large Scale Machine Learning with Spark*, and *Recommender System*. There are more to come. Potential future projects include *Text Summarization*, *Stock Price Forecast*, *Trading Strategy with Reinforcement Learning*, and *Computer Vision*.
 
 ## Customer Churn Study
-<p align="left">
+<p align="center">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/churn_study">
     <img alt="Customer Churn Study" title="Customer Churn Study" src="https://glideconsultingllc.com/wp-content/uploads/2017/02/customer-journey.png">
   </a>
-
-  Churn rate is one of the important business metrics. A company can compare its churn and growth rates to determine if there was overall growth or loss. When the churn rate is higher than the growth rate, the company has experienced a loss in its customer base.
-
-  Why customers churn and stop using a company's services? What is the estimate amount of churn for next quarter? Being able to answer above two questions can provide meaningful insights about what direction the company is currently heading towards and how the company can improve its products and services so that constomers would stay. 
 </p>
 
+Churn rate is one of the important business metrics. A company can compare its churn and growth rates to determine if there was overall growth or loss. When the churn rate is higher than the growth rate, the company has experienced a loss in its customer base.
+
+Why customers churn and stop using a company's services? What is the estimate amount of churn for next quarter? Being able to answer above two questions can provide meaningful insights about what direction the company is currently heading towards and how the company can improve its products and services so that constomers would stay. 
+
 ## Medium Blogpost
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/medium_blogpost">
+    <img alt="Medium Blogpost" title="Medium Blogpost" src="https://juliasilge.com/blog/2018/2018-01-25-sherlock-holmes-stm_files/figure-html/unnamed-chunk-6-1.png">
+  </a>
+</p>
+
 Medium is a popular blogpost publishing platform with enormous amount of contents and text data. What are people publishing? What are the latent topics in those blogposts? What makes a blogpost popular? And what is the trend in today's Technology? This project aims to answer the questions through visualization, analysis, natural language process, and machine learning techniques.
 
 Specifically, I will use **Seaborn** and **Pandas** for exploratory analysis. For machine learning modeling, I choose **K-means**, **tSVD**, and **LatentDirichletAllocation** for topic modeling. I will perform this study with two different ML framework: **Sklearn** and **Spark**.
@@ -72,6 +78,12 @@ Specifically, I will use **Seaborn** and **Pandas** for exploratory analysis. Fo
 
 
 ## Recommender System
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system">
+    <img alt="Recommender System" title="Recommender System" src="http://datameetsmedia.com/wp-content/uploads/2018/05/2ebah6c-1.png">
+  </a>
+</p>
+
 Most products we use today are powered by recommendation engines. Youtube, Netflix, Amazon, Pinterest, and long list of other data products all rely on recommendation engines to filter millions of contents and make personalized recommendations to their users.
 
 It'd be so cool to build a recommender system myself. In generaly, recommender systems can be loosely broken down into three categories: **content based systems**, **collaborative filtering systems**, and **hybrid systems** (which use a combination of the other two).
@@ -88,12 +100,24 @@ To overcome above challenges, I will use **Matrix Factorization** to learn laten
 
 
 ## San Francisco Crime Study
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/sf_crime_study">
+    <img alt="San Francisco Crime Study" title="San Francisco Crime Study" src="https://support.trulia.com/hc/article_attachments/360001824668/blobid0.png">
+  </a>
+</p>
+
 San Francisco has been arising as one the most expensive city to reside. More and more startups and companies move in the city and attracts more and more talents into the city. However, the crime incidents seem to rise up as the average income of its residents too. Car break-ins hit 'epidemic' levels in San Francisco. 
 
 In this study, I will use **Spark** to analyze a 15-year reported incidents dataset from SFPD, and use machine learning methods to understand crime pattern and distribution in SF. Lastly, I will build a time-series forecast model to forecast crime rate
 
 
 ## Useful Open Source NLP Libraries
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/useful_nlp">
+    <img alt="Useful Open Source NLP Libraries" title="Useful Open Source NLP Libraries" src="https://i.pinimg.com/originals/ef/c1/0f/efc10ffb5cee7a5c8d76b3a229ae5a86.png">
+  </a>
+</p>
+
 Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
 
 There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are **Natrual Language ToolKit (NLTK)**, **spaCy**, **sklearn NLP toolkit**, **gensim**, **Pattern**, **polyglot** and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
