@@ -1,6 +1,6 @@
 <h1 align="center"> Recommender Systems </h1> <br>
 <p align="center">
-  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system">
+  <a href="https://buildingrecommenders.files.wordpress.com/2015/11/recommender-comparison1.png">
     <img alt="Recommender System" title="Recommender System" src="https://buildingrecommenders.files.wordpress.com/2015/11/recommender-comparison1.png" width="800" height="600">
   </a>
 </p>
