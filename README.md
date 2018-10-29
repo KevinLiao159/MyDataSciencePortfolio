@@ -127,7 +127,7 @@ Today, we can collect a lot more unstructured data then ever before. Unlike stru
 
 In this project, I will use classical **NLP** techniques: **word tokenization**, **word stemming**, **stopword removal**, **TF-IDF** and more to clean raw text data and extract features from raw text. Then I will use unsupervised learning models such as **K-means** and **LatentDirichletAllocation** to cluster unlabeled documents into different groups, visualize the results and identify their latent topics/structures. 
 
-With clustering techniques applied to unstructured data, we can start to discover the internal structure inside the data and identify similarity between documents.
+With clustering techniques applied to unstructured data, we can start to discover the internal structure inside the data and identify similarity between documents. With similarity score, we start to have the ability to query different documents in Text Store.
 
 
 ## Useful Open Source NLP Libraries
