@@ -116,18 +116,6 @@ San Francisco has been arising as one the most expensive city to reside. More an
 In this study, I will use **Spark** to analyze a 15-year reported incidents dataset from SFPD, and use machine learning methods to understand crime pattern and distribution in SF. Lastly, I will build a time-series forecast model to forecast crime rate
 
 
-## Useful Open Source NLP Libraries
-<p align="center">
-  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/useful_nlp">
-    <img alt="Useful Open Source NLP Libraries" title="Useful Open Source NLP Libraries" src="https://i.pinimg.com/originals/ef/c1/0f/efc10ffb5cee7a5c8d76b3a229ae5a86.png">
-  </a>
-</p>
-
-Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
-
-There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are **Natrual Language ToolKit (NLTK)**, **spaCy**, **sklearn NLP toolkit**, **gensim**, **Pattern**, **polyglot** and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
-
-
 ## Synopsis Clustering
 <p align="center">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/synopsis_clustering">
@@ -140,6 +128,18 @@ Today, we can collect a lot more unstructured data then ever before. Unlike stru
 In this project, I will use classical **NLP** techniques: **word tokenization**, **word stemming**, **stopword removal**, **TF-IDF** and more to clean raw text data and extract features from raw text. Then I will use unsupervised learning models such as **K-means** and **LatentDirichletAllocation** to cluster unlabeled documents into different groups, visualize the results and identify their latent topics/structures. 
 
 With clustering techniques applied to unstructured data, we can start to discover the internal structure inside the data and identify similarity between documents.
+
+
+## Useful Open Source NLP Libraries
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/useful_nlp">
+    <img alt="Useful Open Source NLP Libraries" title="Useful Open Source NLP Libraries" src="https://i.pinimg.com/originals/ef/c1/0f/efc10ffb5cee7a5c8d76b3a229ae5a86.png">
+  </a>
+</p>
+
+Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
+
+There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are **Natrual Language ToolKit (NLTK)**, **spaCy**, **sklearn NLP toolkit**, **gensim**, **Pattern**, **polyglot** and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
 
 
 ## Future Potential Projects
