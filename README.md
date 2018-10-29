@@ -29,6 +29,9 @@
 - [San Francisco Crime Study](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/sf_crime_study)
   - [San Francisco Crime Analysis with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/sf_crime_study/crimes_analysis_using_spark.ipynb)
 
+- [Synopsis Clustering](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/synopsis_clustering)
+  - [Synopsis Clustering](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/synopsis_clustering/synopsis_clustering.ipynb)
+
 - [Useful NLP Libraries](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/useful_nlp)
   - [NLTK](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/nltk.ipynb)
   - [Scikit-Learn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/useful_nlp/sklearn.ipynb)
@@ -66,7 +69,7 @@ Why customers churn and stop using a company's services? What is the estimate am
 ## Medium Blogpost
 <p align="center">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/medium_blogpost">
-    <img alt="Medium Blogpost" title="Medium Blogpost" src="https://juliasilge.com/blog/2018/2018-01-25-sherlock-holmes-stm_files/figure-html/unnamed-chunk-6-1.png">
+    <img alt="Medium Blogpost" title="Medium Blogpost" src="http://yosinski.com/mlss12/media/slides/MLSS-2012-Blei-Probabilistic-Topic-Models_020.png">
   </a>
 </p>
 
@@ -123,6 +126,20 @@ In this study, I will use **Spark** to analyze a 15-year reported incidents data
 Natural language processing (NLP) is a trending area about how to program machines to process and analyze large amounts of natural language data, and extract meaningful information from it.
 
 There are many tools and libraries designed to solve NLP problems. The most commonly used libraries are **Natrual Language ToolKit (NLTK)**, **spaCy**, **sklearn NLP toolkit**, **gensim**, **Pattern**, **polyglot** and many others. My notebook will introduce the basic usage, pros and cons of each NLP libraries. 
+
+
+## Synopsis Clustering
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/synopsis_clustering">
+    <img alt="Synopsis Clustering" title="Synopsis Clustering" src="https://juliasilge.com/blog/2018/2018-01-25-sherlock-holmes-stm_files/figure-html/unnamed-chunk-6-1.png">
+  </a>
+</p>
+
+Today, we can collect a lot more unstructured data then ever before. Unlike structured data, unstructured data is not structured via pre-defined data models or schema, but it does have internal structure. One example of unstructured data is text data, such as plot summary, synopsis of movies.  
+
+In this project, I will use classical **NLP** techniques: **word tokenization**, **word stemming**, **stopword removal**, **TF-IDF** and more to clean raw text data and extract features from raw text. Then I will use unsupervised learning models such as **K-means** and **LatentDirichletAllocation** to cluster unlabeled documents into different groups, visualize the results and identify their latent topics/structures. 
+
+With clustering techniques applied to unstructured data, we can start to discover the internal structure inside the data and identify similarity between documents.
 
 
 ## Future Potential Projects
