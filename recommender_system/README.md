@@ -12,8 +12,16 @@
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 
-- [Recommender System](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system)
+- [Recommender System Introduction](#recommender-system-introduction)
+   - Collaborative Filtering
+   - Content-based Filtering
+   - Hybrid Recommender
+   - Common Challenges
+   - Solution
 
+- [Recommender System Development](#recommender-system-development)
+
+  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
   - [Movie Recommendation Engine Development in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
   - [Movie Recommendation Engine Development in Deep Learning with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
 
@@ -25,20 +33,22 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-## Recommender System
+## Recommender System Introduction
 A recommender system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas including movies, music, news, social tags, and products in general. Recommender systems typically produce a list of recommendations in one of two ways – through collaborative filtering or through content-based filtering.
 
-> Collaborative filtering
+> Collaborative Filtering
 
 This approach builds a model from a user's past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users. This model is then used to predict items (or ratings for items) that the user may have an interest in
 
-> Content-based filtering
+> Content-based Filtering
 
 This approach utilizes a series of discrete characteristics of an item in order to recommend additional items with similar properties
 
 > Hybrid Recommender
 
 This one combines the previous two approaches
+
+> Common Challenges
 
 In my project, I will focus on building a collaborative filtering engine. In collaborative filtering, there are typically following challenges:
 * cold start
@@ -50,6 +60,8 @@ In my project, I will focus on building a collaborative filtering engine. In col
 > Solution
 
 Use matrix factorization technique to reduce dimensionality and sparsity, as well as capturing user information in user latent factors and item information in item latent factors
+
+
 
 > Implementations
 
