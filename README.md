@@ -21,10 +21,9 @@
   - [Topic Modeling on Medium BlogPost with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_pyspark.ipynb)
 
 - [Recommender System](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system)
-  - [Movie Recommendation Engine Development with Matrix Factorization]
-  (#TODO)
-  - [Movie Recommendation Engine Development in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
-  - [Movie Recommendation Engine Development in Deep Learning with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
+  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
+  - [Movie Recommendation Engine Development with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+  - [Movie Recommendation Engine Development with Deep Learning in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
 
 - [San Francisco Crime Study](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/sf_crime_study)
   - [San Francisco Crime Analysis with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/sf_crime_study/crimes_analysis_using_spark.ipynb)
