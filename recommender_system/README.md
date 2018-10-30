@@ -12,7 +12,7 @@
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 
-- [Recommender System Introduction](#recommender-system-introduction)
+- [Recommender System Overview](#recommender-system-verview)
    - [Collaborative Filtering](#collaborative-filtering)
    - [Content-based Filtering](#content-based-filtering)
    - [Hybrid Recommender](#hybrid-recommender)
@@ -33,7 +33,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-## Recommender System Introduction
+## Recommender System Overview
 A recommender system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas including movies, music, news, social tags, and products in general. Recommender systems typically produce a list of recommendations in one of two ways – through collaborative filtering or through content-based filtering.
 
 #### Collaborative Filtering
@@ -68,12 +68,15 @@ Above chart is the distribution of item rating frequency. This distribution ofte
 
 In most cases, high-frequency items tend to be relatively competitive items with little profit for the merchant. On the other hand, the lower frequency items have larger profit margins. However, many recommendation algorithms have a tendency to suggest popular items rather than infrequent items. This phenomenon also has a negative impact on diversity, and users may often become bored by receiving the same set of recommendations of popular items
 
-
 #### Solution
 
 Use matrix factorization technique to train model to learn user-item interaction by capturing user information in user latent factors and item information in item latent factors. Meanwhile, matrix factorization technique can significantly reduce dimensionality and sparsity and it will reduce huge amount of memory footprint and make our system more scalable
 
 
+## Recommender System Development
+
+
+#### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
 
 
 > Implementations
