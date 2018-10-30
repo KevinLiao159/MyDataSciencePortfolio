@@ -36,30 +36,43 @@
 ## Recommender System Introduction
 A recommender system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas including movies, music, news, social tags, and products in general. Recommender systems typically produce a list of recommendations in one of two ways – through collaborative filtering or through content-based filtering.
 
-### Collaborative Filtering
+#### Collaborative Filtering
 
 This approach builds a model from a user's past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users. This model is then used to predict items (or ratings for items) that the user may have an interest in
 
-### Content-based Filtering
+#### Content-based Filtering
 
 This approach utilizes a series of discrete characteristics of an item in order to recommend additional items with similar properties
 
-### Hybrid Recommender
+#### Hybrid Recommender
 
 This one combines the previous two approaches
 
-### Common Challenges
+#### Common Challenges
 
 In my project, I will focus on building a collaborative filtering engine. In collaborative filtering, there are typically following challenges:
+
 * cold start
 * data sparsity
 * popular bias (how to recommend products from the tail of product distribution)
 * scalability (computation grows as number of users and items grow)
 * pool relationship between like-minded yet sparse users
 
-### Solution
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb">
+    <img alt="Long Tail Property in Ratings Distribution" title="Long Tail Property in Ratings Distribution" src="https://media.springernature.com/lw785/springer-static/image/chp%3A10.1007%2F978-3-319-29659-3_2/MediaObjects/334607_1_En_2_Fig1_HTML.gif">
+  </a>
+</p>
 
-Use matrix factorization technique to reduce dimensionality and sparsity, as well as capturing user information in user latent factors and item information in item latent factors
+Above chart is the distribution of item rating frequency. This distribution often satisfies a property in real-world settings, which is referred to as the long-tail property. According to this property, only a small fraction of the items are rated frequently. Such items are referred to as popular items. The vast majority of items are rated rarely. 
+
+In most cases, high-frequency items tend to be relatively competitive items with little profit for the merchant. On the other hand, the lower frequency items have larger profit margins. However, many recommendation algorithms have a tendency to suggest popular items rather than infrequent items. This phenomenon also has a negative impact on diversity, and users may often become bored by receiving the same set of recommendations of popular items
+
+
+#### Solution
+
+Use matrix factorization technique to train model to learn user-item interaction by capturing user information in user latent factors and item information in item latent factors. Meanwhile, matrix factorization technique can significantly reduce dimensionality and sparsity and it will reduce huge amount of memory footprint and make our system more scalable
+
 
 
 
