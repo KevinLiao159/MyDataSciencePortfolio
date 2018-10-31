@@ -1,7 +1,7 @@
-<h1 align="center"> Recommender Systems </h1> <br>
+<h1 align="center"> Movie Recommender Systems </h1> <br>
 <p align="center">
-  <a href="https://buildingrecommenders.files.wordpress.com/2015/11/recommender-comparison1.png">
-    <img alt="Recommender System" title="Recommender System" src="https://buildingrecommenders.files.wordpress.com/2015/11/recommender-comparison1.png" width="800" height="600">
+  <a href="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395">
+    <img alt="Recommender Systems" title="Recommender Systems" src="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395" width="800" height="600">
   </a>
 </p>
 
@@ -19,7 +19,7 @@
    - [Common Challenges](#common-challenges)
    - [Solution](#solution)
 
-- [Recommender System Development](#recommender-system-development)
+- [Movie Recommender System Development](#movie-recommender-system-development)
 
   - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
   - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
@@ -73,7 +73,7 @@ In most cases, high-frequency items tend to be relatively competitive items with
 Use matrix factorization technique to train model to learn user-item interaction by capturing user information in user latent factors and item information in item latent factors. Meanwhile, matrix factorization technique can significantly reduce dimensionality and sparsity and it will reduce huge amount of memory footprint and make our system more scalable
 
 
-## Recommender System Development
+## Movie Recommender System Development
 
 In this project, I focus on collaborative filtering recommender systems since they are widely used and well research in many different business and consistently provide good business values. It'd be very cool I can develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
 

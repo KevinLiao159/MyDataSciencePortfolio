@@ -20,7 +20,7 @@
   - [Topic Modeling on Medium BlogPost with Sklearn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_sklearn.ipynb)
   - [Topic Modeling on Medium BlogPost with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_pyspark.ipynb)
 
-- [Recommender System](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender)
+- [Movie Recommender Systems](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender)
   - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
   - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
   - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_NeuMF.ipynb)
@@ -81,16 +81,16 @@ Specifically, I will use **Seaborn** and **Pandas** for exploratory analysis. Fo
 However, in the age of Big Data, most data analysis are predicated on distributed computing. **Spark** is distributed cluster-computing framework and provides an interface for programming entire clusters with implicit data parallelism and fault tolerance.
 
 
-## Recommender System
+## Movie Recommender Systems
 <p align="center">
   <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender">
-    <img alt="Recommender System" title="Recommender System" src="http://datameetsmedia.com/wp-content/uploads/2018/05/2ebah6c-1.png">
+    <img alt="Recommender System" title="Recommender System" src="https://static1.squarespace.com/static/55ff6aece4b0ad2d251b3fee/t/59c42ffd8a02c798d1cc832d/1506029566112/netflix.jpg?format=750w">
   </a>
 </p>
 
 Most products we use today are powered by recommendation engines. Youtube, Netflix, Amazon, Pinterest, and long list of other data products all rely on recommendation engines to filter millions of contents and make personalized recommendations to their users.
 
-It'd be so cool to build a recommender system myself. In generaly, recommender systems can be loosely broken down into three categories: **content based systems**, **collaborative filtering systems**, and **hybrid systems** (which use a combination of the other two).
+It'd be so cool to build a recommender system myself. I love watching movies when I am spending time with my family. So I decided to build a movie recommender for myself. In generaly, recommender systems can be loosely broken down into three categories: **content based systems**, **collaborative filtering systems**, and **hybrid systems** (which use a combination of the other two).
 
 My project focuses on collaborative filtering systems. Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user based or item based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
