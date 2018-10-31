@@ -62,7 +62,7 @@ class KnnRecommender:
 
         n_jobs: int or None, optional (default=None)
         """
-        if n_jobs > 1:
+        if n_jobs and (n_jobs > 1 or n_jobs == -1):
             os.environ['JOBLIB_TEMP_FOLDER'] = '/tmp'
         self.model.set_params(**{
             'n_neighbors': n_neighbors,
@@ -148,14 +148,14 @@ class KnnRecommender:
                   '{0}\n'.format([x[0] for x in match_tuple]))
             return match_tuple[0][1]
 
-    def _inference(self, model_knn, data, hashmap,
+    def _inference(self, model, data, hashmap,
                    fav_movie, n_recommendations):
         """
         return top n similar movie recommendations based on user's input movie
 
         Parameters
         ----------
-        model_knn: sklearn model, knn model
+        model: sklearn model, knn model
 
         data: movie-user matrix
 
@@ -170,7 +170,7 @@ class KnnRecommender:
         list of top n similar movie recommendations
         """
         # fit
-        model_knn.fit(data)
+        model.fit(data)
         # get input movie index
         print('You have input movie:', fav_movie)
         idx = self._fuzzy_matching(hashmap, fav_movie)
@@ -178,7 +178,7 @@ class KnnRecommender:
         print('Recommendation system start to make inference')
         print('......\n')
         t0 = time.time()
-        distances, indices = model_knn.kneighbors(
+        distances, indices = model.kneighbors(
             data[idx],
             n_neighbors=n_recommendations+1)
         # get list of raw idx of recommendations
@@ -211,7 +211,7 @@ class KnnRecommender:
         movie_user_mat_sparse, hashmap = self._prep_data()
         # get recommendations
         raw_recommends = self._inference(
-            self.model_knn, movie_user_mat_sparse, hashmap,
+            self.model, movie_user_mat_sparse, hashmap,
             fav_movie, n_recommendations)
         # print results
         reverse_hashmap = {v: k for k, v in hashmap.items()}
