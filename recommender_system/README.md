@@ -75,7 +75,7 @@ Use matrix factorization technique to train model to learn user-item interaction
 
 ## Recommender System Development
 
-In this project, I will focus on collaborative filtering recommender systems since they are widely used and well research in many different businesses and consistently provide good business values. Specically, I will develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
+In this project, I focus on collaborative filtering recommender systems since they are widely used and well research in many different business and consistently provide good business values. It'd be very cool I can develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
 
 #### Datasets
 
