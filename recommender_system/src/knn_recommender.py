@@ -222,7 +222,9 @@ class KnnRecommender:
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run KNN Movie Recommender")
+    parser = argparse.ArgumentParser(
+        prog="Movie Recommender",
+        description="Run KNN Movie Recommender")
     parser.add_argument('--path', nargs='?', default='data/MovieLens',
                         help='input data path')
     parser.add_argument('--movies_filename', nargs='?', default='movies.csv',
@@ -240,9 +242,9 @@ if __name__ == '__main__':
     # get args
     args = parse_args()
     data_path = args.path
-    movies_filename = args.movies_name
+    movies_filename = args.movies_filename
     ratings_filename = args.ratings_filename
-    movie_name = args.movie_filename
+    movie_name = args.movie_name
     top_n = args.top_n
     # initial recommender system
     recommender = KnnRecommender(
