@@ -217,8 +217,8 @@ class KnnRecommender:
         reverse_hashmap = {v: k for k, v in hashmap.items()}
         print('Recommendations for {}:'.format(fav_movie))
         for i, (idx, dist) in enumerate(raw_recommends):
-            print('{0}: {1}, with distance \
-                  of {2}'.format(i+1, reverse_hashmap[idx], dist))
+            print('{0}: {1}, with distance '
+                  'of {2}'.format(i+1, reverse_hashmap[idx], dist))
 
 
 def parse_args():

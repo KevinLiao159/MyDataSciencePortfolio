@@ -78,12 +78,39 @@ Use matrix factorization technique to train model to learn user-item interaction
 
 #### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
 
-Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user based or item based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
+Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user-based or item-based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
 KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors.
 
+> Let's Make Some Recommendations
 
-> Implementations
+"Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
+
+Run KNN recommender system:
+```
+python knn_recommender.py --movie_name "Iron Man" --top_n 10
+```
+
+Output:
+```
+You have input movie: Iron Man
+Found possible matches in our database: ['Iron Man (2008)', 'Iron Man 3 (2013)', 'Iron Man 2 (2010)']
+
+Recommendation system start to make inference ...
+It took my system 1.38s to make inference
+Recommendations for Iron Man:
+1: Bourne Ultimatum, The (2007), with distance of 0.42213231325149536
+2: Sherlock Holmes (2009), with distance of 0.4194795489311218
+3: Inception (2010), with distance of 0.3934664726257324
+4: Avatar (2009), with distance of 0.3836246728897095
+5: WALL·E (2008), with distance of 0.3835691213607788
+6: Star Trek (2009), with distance of 0.37533360719680786
+7: Batman Begins (2005), with distance of 0.37033611536026
+8: Iron Man 2 (2010), with distance of 0.3703038692474365
+9: Avengers, The (2012), with distance of 0.35819315910339355
+10: Dark Knight, The (2008), with distance of 0.3013307452201843
+```
+
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
 * [Alternating Least Square (ALS) Matrix Factorization](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering)
