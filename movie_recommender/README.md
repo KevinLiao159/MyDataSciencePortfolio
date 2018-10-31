@@ -29,6 +29,7 @@
   - [Alternative Least Square with Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/spark_recommender_system.py)
   - [Neural Collaborative Filtering with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/neural_recommender_system.py)
 
+- [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -58,7 +59,7 @@ In my project, I will focus on building a collaborative filtering engine. In col
   </a>
 </p>
 
-Above chart is the distribution of item rating frequency. This distribution often satisfies a property in real-world settings, which is referred to as the long-tail property. According to this property, only a small fraction of the items are rated frequently. Such items are referred to as popular items. The vast majority of items are rated rarely. 
+Above chart is the distribution of item rating frequency. This distribution often satisfies a property in real-world settings, which is referred to as the long-tail property [1]. According to this property, only a small fraction of the items are rated frequently. Such items are referred to as popular items. The vast majority of items are rated rarely. 
 
 In most cases, high-frequency items tend to be relatively competitive items with little profit for the merchant. On the other hand, the lower frequency items have larger profit margins. However, many recommendation algorithms have a tendency to suggest popular items rather than infrequent items. This phenomenon also has a negative impact on diversity, and users may often become bored by receiving the same set of recommendations of popular items
 
@@ -70,7 +71,7 @@ Use matrix factorization technique to train model to learn user-item interaction
 In this project, I focus on collaborative filtering recommender systems since they are widely used and well research in many different business and consistently provide good business values. It'd be very cool I can develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
 
 #### Datasets
-I use [MovieLens Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
+I use [MovieLens Datasets [2]](https://grouplens.org/datasets/movielens/latest/). This dataset describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
 
 #### Models
 I start with basic and easy-implment models for my recommender system. As I want to improve my system's recommendations, I use more complex models. Eventually, I use neural networks for the recommender system. Following is the list of three models I'd like to use.
@@ -82,7 +83,7 @@ I start with basic and easy-implment models for my recommender system. As I want
 ### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
 Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user-based or item-based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
-KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors.
+KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors [1].
 
 #### Let's Make Some Recommendations
 "Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
@@ -128,10 +129,17 @@ Advantages of collaborative filtering using Matrix Factorization:
 * User interest may change over time
 * Explainability
 
+There are matrix factorization methods such as **Singular Value Decomposition (SVD)** and **Non-Negative Matrix Factorization (NMF)**. I chose [Alternating Least Square (ALS) implemented in Spark](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering) because it is a parallel algorithm designed for a large-scale collaborative filtering problems (such as the Netflix Prize). This method is doing a pretty good job at resolving scalability and sparseness of the user profiles, and it's simple and scales well to very large datasets.
+
+The basic ideas behind ALS are:
+* Factorize a big matrix into two small matrix (A = Users * Items)
+* Use two loss functions for gradient descent
+* Alternative gradient descent between Users and Items matrices back and forth
+
+If you are interested in the math part behind ALS, please read [Large-scale Parallel Collaborative Filtering for the Netflix Prize [3]](https://endymecy.gitbooks.io/spark-ml-source-analysis/content/%E6%8E%A8%E8%8D%90/papers/Large-scale%20Parallel%20Collaborative%20Filtering%20the%20Netflix%20Prize.pdf)
 
 
-
-
+#### Let's Make Some Recommendations
 
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine

@@ -9,7 +9,6 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## Table of Contents
-
 - [Introduction](#introduction)
 
 - [Customer Churn Study](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/churn_study)
