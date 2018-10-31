@@ -22,8 +22,8 @@
 - [Recommender System Development](#recommender-system-development)
 
   - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
-  - [Movie Recommendation Engine Development in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
-  - [Movie Recommendation Engine Development in Deep Learning with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
+  - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+  - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
 
 - [Source Code](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system/src)
   - [Alternative Least Square with Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/src/spark_recommender_system.py)
@@ -77,6 +77,10 @@ Use matrix factorization technique to train model to learn user-item interaction
 
 
 #### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
+
+Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user based or item based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
+
+KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors.
 
 
 > Implementations
