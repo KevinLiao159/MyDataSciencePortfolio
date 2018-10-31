@@ -1,7 +1,7 @@
 <h1 align="center"> Movie Recommender Systems </h1> <br>
 <p align="center">
   <a href="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395">
-    <img alt="Recommender Systems" title="Recommender Systems" src="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395" width="800" height="600">
+    <img alt="Recommender Systems" title="Recommender Systems" src="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395">
   </a>
 </p>
 
@@ -32,26 +32,20 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Recommender System Overview
 A recommender system is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas including movies, music, news, social tags, and products in general. Recommender systems typically produce a list of recommendations in one of two ways – through collaborative filtering or through content-based filtering.
 
 #### Collaborative Filtering
-
 This approach builds a model from a user's past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users. This model is then used to predict items (or ratings for items) that the user may have an interest in
 
 #### Content-based Filtering
-
 This approach utilizes a series of discrete characteristics of an item in order to recommend additional items with similar properties
 
 #### Hybrid Recommender
-
 This one combines the previous two approaches
 
 #### Common Challenges
-
 In my project, I will focus on building a collaborative filtering engine. In collaborative filtering, there are typically following challenges:
-
 * cold start
 * data sparsity
 * popular bias (how to recommend products from the tail of product distribution)
@@ -69,20 +63,16 @@ Above chart is the distribution of item rating frequency. This distribution ofte
 In most cases, high-frequency items tend to be relatively competitive items with little profit for the merchant. On the other hand, the lower frequency items have larger profit margins. However, many recommendation algorithms have a tendency to suggest popular items rather than infrequent items. This phenomenon also has a negative impact on diversity, and users may often become bored by receiving the same set of recommendations of popular items
 
 #### Solution
-
 Use matrix factorization technique to train model to learn user-item interaction by capturing user information in user latent factors and item information in item latent factors. Meanwhile, matrix factorization technique can significantly reduce dimensionality and sparsity and it will reduce huge amount of memory footprint and make our system more scalable
 
 
 ## Movie Recommender System Development
-
 In this project, I focus on collaborative filtering recommender systems since they are widely used and well research in many different business and consistently provide good business values. It'd be very cool I can develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
 
 #### Datasets
-
 I use [MovieLens Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
 
 #### Models
-
 I start with basic and easy-implment models for my recommender system. As I want to improve my system's recommendations, I use more complex models. Eventually, I use neural networks for the recommender system. Following is the list of three models I'd like to use.
  - **KNN Item Based Collaborative Filtering**
  - **Alternating Least Square** (ALS) Matrix Factorization
@@ -90,13 +80,11 @@ I start with basic and easy-implment models for my recommender system. As I want
 
 
 ### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
-
 Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user-based or item-based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
 KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors.
 
 #### Let's Make Some Recommendations
-
 "Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
 
 Check out detailed source code and instruction of commands (see the parse_args function) in [knn_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/knn_recommender.py)
@@ -130,7 +118,6 @@ It's interesting that the recommended movies are from the same time period as "I
 
 
 ### [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
-
 **Alternating Least Square (ALS)** is one of state-of-the-art **Matrix Factorization** models under the context of distributed computing.
 
 Matrix Factorization is simply a mathematical operation for matrices. It is usually more effective in collaborative filtering, because it allows us to discover the latent (hidden) features underlying the interactions between users and items (movies).
@@ -140,6 +127,9 @@ Advantages of collaborative filtering using Matrix Factorization:
 * "Item cold-start" problem is avoided
 * User interest may change over time
 * Explainability
+
+
+
 
 
 
