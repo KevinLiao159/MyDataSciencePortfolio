@@ -21,13 +21,13 @@
 
 - [Recommender System Development](#recommender-system-development)
 
-  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
-  - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
-  - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_NeuMF.ipynb)
+  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
+  - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
+  - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_NeuMF.ipynb)
 
-- [Source Code](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/recommender_system/src)
-  - [Alternative Least Square with Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/src/spark_recommender_system.py)
-  - [Neural Collaborative Filtering with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/src/neural_recommender_system.py)
+- [Source Code](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender/src)
+  - [Alternative Least Square with Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/spark_recommender_system.py)
+  - [Neural Collaborative Filtering with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/neural_recommender_system.py)
 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -59,7 +59,7 @@ In my project, I will focus on building a collaborative filtering engine. In col
 * pool relationship between like-minded yet sparse users
 
 <p align="center">
-  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb">
     <img alt="Long Tail Property in Ratings Distribution" title="Long Tail Property in Ratings Distribution" src="https://media.springernature.com/lw785/springer-static/image/chp%3A10.1007%2F978-3-319-29659-3_2/MediaObjects/334607_1_En_2_Fig1_HTML.gif">
   </a>
 </p>
@@ -89,7 +89,7 @@ I start with basic and easy-implment models for my recommender system. As I want
  - **Neural Collaborative Filtering** Approach
 
 
-### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
+### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
 
 Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user-based or item-based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
@@ -99,7 +99,7 @@ KNN is a perfect go-to model for this use case and KNN is a very good baseline f
 
 "Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
 
-Check out detailed source code and instruction of commands in [knn_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/src/knn_recommender.py)
+Check out detailed source code and instruction of commands (see the parse_args function) in [knn_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/knn_recommender.py)
 
 Run KNN recommender system:
 ```
@@ -114,22 +114,22 @@ Found possible matches in our database: ['Iron Man (2008)', 'Iron Man 3 (2013)',
 Recommendation system start to make inference ...
 It took my system 1.38s to make inference
 Recommendations for Iron Man:
-1: Bourne Ultimatum, The (2007), with distance of 0.42213231325149536
-2: Sherlock Holmes (2009), with distance of 0.4194795489311218
-3: Inception (2010), with distance of 0.3934664726257324
-4: Avatar (2009), with distance of 0.3836246728897095
-5: WALL·E (2008), with distance of 0.3835691213607788
-6: Star Trek (2009), with distance of 0.37533360719680786
-7: Batman Begins (2005), with distance of 0.37033611536026
-8: Iron Man 2 (2010), with distance of 0.3703038692474365
-9: Avengers, The (2012), with distance of 0.35819315910339355
-10: Dark Knight, The (2008), with distance of 0.3013307452201843
+1: Bourne Ultimatum, The (2007), with distance of 0.4221
+2: Sherlock Holmes (2009), with distance of 0.4194
+3: Inception (2010), with distance of 0.3934
+4: Avatar (2009), with distance of 0.3836
+5: WALL·E (2008), with distance of 0.3835
+6: Star Trek (2009), with distance of 0.3753
+7: Batman Begins (2005), with distance of 0.3703
+8: Iron Man 2 (2010), with distance of 0.3703
+9: Avengers, The (2012), with distance of 0.3581
+10: Dark Knight, The (2008), with distance of 0.3013
 ```
 
 It's interesting that the recommended movies are from the same time period as "Iron Man". These movies were as much popular as "Iron Man" at that time. This is exactly the downside of item-based collaborative filtering system. It always offers users the same set of very popular items. Users might get bored at same point without seeing diversity of recommendations
 
 
-### [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+### [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
 
 **Alternating Least Square (ALS)** is one of state-of-the-art **Matrix Factorization** models under the context of distributed computing.
 
