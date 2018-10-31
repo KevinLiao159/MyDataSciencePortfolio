@@ -99,6 +99,8 @@ KNN is a perfect go-to model for this use case and KNN is a very good baseline f
 
 "Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
 
+Check out detailed source code and instruction of commands in [knn_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/src/knn_recommender.py)
+
 Run KNN recommender system:
 ```
 python src/knn_recommender.py --movie_name "Iron Man" --top_n 10
@@ -128,6 +130,16 @@ It's interesting that the recommended movies are from the same time period as "I
 
 
 ### [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+
+**Alternating Least Square (ALS)** is one of state-of-the-art **Matrix Factorization** models under the context of distributed computing.
+
+Matrix Factorization is simply a mathematical operation for matrices. It is usually more effective in collaborative filtering, because it allows us to discover the latent (hidden) features underlying the interactions between users and items (movies).
+
+Advantages of collaborative filtering using Matrix Factorization:
+* No need to know about item content
+* "Item cold-start" problem is avoided
+* User interest may change over time
+* Explainability
 
 
 
