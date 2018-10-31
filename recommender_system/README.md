@@ -75,6 +75,19 @@ Use matrix factorization technique to train model to learn user-item interaction
 
 ## Recommender System Development
 
+In this project, I will focus on collaborative filtering recommender systems since they are widely used and well research in many different businesses and consistently provide good business values. Specically, I will develop **Movie Recommender Systems** for myself. Let's see what movie recommendations my recommender offers me.
+
+#### Datasets
+
+I use [MovieLens Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 27753444 ratings and 1108997 tag applications across 58098 movies. These data were created by 283228 users between January 09, 1995 and September 26, 2018. This dataset was generated on September 26, 2018.
+
+#### Models
+
+I start with basic and easy-implment models for my recommender system. As I want to improve my system's recommendations, I use more complex models. Eventually, I use neural networks for the recommender system. Following is the list of three models I'd like to use.
+ - **KNN Item Based Collaborative Filtering**
+ - **Alternating Least Square** (ALS) Matrix Factorization
+ - **Neural Collaborative Filtering** Approach
+
 
 ### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_KNN.ipynb)
 
@@ -88,7 +101,7 @@ KNN is a perfect go-to model for this use case and KNN is a very good baseline f
 
 Run KNN recommender system:
 ```
-python knn_recommender.py --movie_name "Iron Man" --top_n 10
+python src/knn_recommender.py --movie_name "Iron Man" --top_n 10
 ```
 
 Output:
@@ -111,6 +124,13 @@ Recommendations for Iron Man:
 10: Dark Knight, The (2008), with distance of 0.3013307452201843
 ```
 
+It's interesting that the recommended movies are from the same time period as "Iron Man". These movies were as much popular as "Iron Man" at that time. This is exactly the downside of item-based collaborative filtering system. It always offers users the same set of very popular items. Users might get bored at same point without seeing diversity of recommendations
+
+
+### [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/recommender_system/movie_recommendation_using_ALS.ipynb)
+
+
+
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
 * [Alternating Least Square (ALS) Matrix Factorization](https://spark.apache.org/docs/preview/ml-collaborative-filtering.html#collaborative-filtering)
@@ -118,10 +138,6 @@ I choose to use two types of different ML algos to build two separate movie reco
   * Generalized Matrix Factorization (GMF)
   * Multi-Layer Perceptron (MLP)
   * Neural Matrix Factorization (NeuMF)
-
-> Datasets
-
-I use [MovieLens Small Datasets](https://grouplens.org/datasets/movielens/latest/). This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100004 ratings and 1296 tag applications across 9125 movies.
 
 > Model Performance Comparison on Test Datasets
 
