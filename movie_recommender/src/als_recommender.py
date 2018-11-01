@@ -1,3 +1,4 @@
+import time
 import gc
 
 # spark imports
@@ -224,10 +225,66 @@ class AlsRecommender:
             .withColumn('userId', lit(int(userId))) \
             .select(['userId', 'movieId'])
 
-    def _inference(self, model, data, fav_movie, n_recommendations):
+    def _inference(self, model, fav_movie, n_recommendations):
         """
+        return top n movie recommendations based on user's input movie
+
+        Parameters
+        ----------
+        model: spark ALS model
+
+        fav_movie: str, name of user input movie
+
+        n_recommendations: int, top n recommendations
+
+        Return
+        ------
+        list of top n similar movie recommendations
         """
+        # create a userId
+        userId = self.ratingsDF.agg({"userId": "max"}).collect()[0][0] + 1
+        # get movieIds of favorite movies
+        movieIds = self._regex_matching(fav_movie)
+        # append new user with his/her ratings into data
+        self._append_ratings(userId, movieIds)
+        # matrix factorization
+        model = model.fit(self.ratingsDF)
+        # get data for inferencing
+        inferenceDF = self._create_inference_data(userId, movieIds)
+        # make inference
+        return model.transform(inferenceDF) \
+            .select(['movieId', 'prediction']) \
+            .orderBy('prediction', ascending=False) \
+            .rdd.map(lambda r: (r[0], r[1])) \
+            .take(n_recommendations)
 
     def make_recommendations(self, fav_movie, n_recommendations):
         """
+        make top n movie recommendations
+
+        Parameters
+        ----------
+        fav_movie: str, name of user input movie
+
+        n_recommendations: int, top n recommendations
         """
+        # make inference and get raw recommendations
+        print('Recommendation system start to make inference ...')
+        t0 = time.time()
+        raw_recommends = \
+            self._inference(self.model, fav_movie, n_recommendations)
+        movieIds = [r[0] for r in raw_recommends]
+        scores = [r[1] for r in raw_recommends]
+        print('It took my system {:.2f}s to make inference \n\
+              '.format(time.time() - t0))
+        # get movie titles
+        movie_titles = self.moviesDF \
+            .filter(col('movieId').isin(movieIds)) \
+            .select('title') \
+            .rdd.map(lambda r: r[0]) \
+            .collect()
+        # print recommendations
+        print('Recommendations for {}:'.format(fav_movie))
+        for i in range(len(movie_titles)):
+            print('{0}: {1}, with rating '
+                  'of {2}'.format(i+1, movie_titles[i], scores[i]))
