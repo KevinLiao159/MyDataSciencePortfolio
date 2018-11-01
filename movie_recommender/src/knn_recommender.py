@@ -197,7 +197,7 @@ class KnnRecommender:
         # return recommendation (movieId, distance)
         return raw_recommends
 
-    def make_recommendation(self, fav_movie, n_recommendations):
+    def make_recommendations(self, fav_movie, n_recommendations):
         """
         make top n movie recommendations
 
@@ -254,4 +254,4 @@ if __name__ == '__main__':
     recommender.set_filter_params(50, 50)
     recommender.set_model_params(20, 'brute', 'cosine', -1)
     # make recommendations
-    recommender.make_recommendation(movie_name, top_n)
+    recommender.make_recommendations(movie_name, top_n)

@@ -59,7 +59,7 @@ In my project, I will focus on building a collaborative filtering engine. In col
   </a>
 </p>
 
-Above chart is the distribution of item rating frequency. This distribution often satisfies a property in real-world settings, which is referred to as the long-tail property [1]. According to this property, only a small fraction of the items are rated frequently. Such items are referred to as popular items. The vast majority of items are rated rarely. 
+Above chart is the distribution of item rating frequency. This distribution often satisfies a property in real-world settings, which is referred to as [the long-tail property [1]](https://www.springer.com/cda/content/document/cda_downloaddocument/9783319296579-c1.pdf?SGWID=0-0-45-1554478-p179516130). According to this property, only a small fraction of the items are rated frequently. Such items are referred to as popular items. The vast majority of items are rated rarely. 
 
 In most cases, high-frequency items tend to be relatively competitive items with little profit for the merchant. On the other hand, the lower frequency items have larger profit margins. However, many recommendation algorithms have a tendency to suggest popular items rather than infrequent items. This phenomenon also has a negative impact on diversity, and users may often become bored by receiving the same set of recommendations of popular items
 
@@ -83,7 +83,7 @@ I start with basic and easy-implment models for my recommender system. As I want
 ### [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
 Collaborative filtering based systems use the actions of users to recommend other items. In general, they can either be user-based or item-based. Item-based approach is usually prefered than user-based approach. User-based approach is often harder to scale because of the dynamic nature of users, whereas items usually don't change much, so item-based approach often can be computed offline.
 
-KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k nearest neighbors [1].
+KNN is a perfect go-to model for this use case and KNN is a very good baseline for recommender system development. In item-based collaborative filtering, KNN will use a pre-defined distance metric to find clusters of similar items based on users' ratings, and make recommendations using the distance metric in item ratings of top-k [nearest neighbors [1]]((https://www.springer.com/cda/content/document/cda_downloaddocument/9783319296579-c1.pdf?SGWID=0-0-45-1554478-p179516130)).
 
 #### Let's Make Some Recommendations
 "Iron Man" is one of my favorite movies so I want to test what movie recommendations my system is giving me. It's very cool to see my recommender system give me recommendations
@@ -138,8 +138,17 @@ The basic ideas behind ALS are:
 
 If you are interested in the math part behind ALS, please read [Large-scale Parallel Collaborative Filtering for the Netflix Prize [3]](https://endymecy.gitbooks.io/spark-ml-source-analysis/content/%E6%8E%A8%E8%8D%90/papers/Large-scale%20Parallel%20Collaborative%20Filtering%20the%20Netflix%20Prize.pdf)
 
+Hyperparameter tuning in Alternating Least Square:
+* maxIter: the maximum number of iterations to run (defaults to 10)
+* rank: the number of latent factors in the model (defaults to 10)
+* regParam: the regularization parameter in ALS (defaults to 1.0)
 
 #### Let's Make Some Recommendations
+
+
+
+
+
 
 
 I choose to use two types of different ML algos to build two separate movie recommendation engines and compare their performance and results respectively. The following is the list of my ML algos to implement movie recommendation engine
