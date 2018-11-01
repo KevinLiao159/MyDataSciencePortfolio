@@ -26,8 +26,9 @@
   - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_NeuMF.ipynb)
 
 - [Source Code](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender/src)
-  - [Alternative Least Square with Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/spark_recommender_system.py)
-  - [Neural Collaborative Filtering with Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/neural_recommender_system.py)
+  - [Movie Recommender with KNN Item Based Collaborative Filtering](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/knn_recommender.py)
+  - [Movie Recommender with Alternative Least Square Matrix Factorization](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/als_recommender.py)
+  - [Movie Recommender with Neural Collaborative Filtering](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/neural_recommender.py)
 
 - [References](#references)
 
