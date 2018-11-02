@@ -95,6 +95,7 @@ class AlsRecommender:
         ------
         list of indices of the matching movies
         """
+        print('You have input movie:', fav_movie)
         matchesDF = self.moviesDF \
             .filter(
                 lower(

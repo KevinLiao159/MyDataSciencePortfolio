@@ -145,6 +145,37 @@ Hyperparameter tuning in Alternating Least Square:
 * regParam: the regularization parameter in ALS (defaults to 1.0)
 
 #### Let's Make Some Recommendations
+I will pretend a user and input my favorite movie "Iron Man" again into this new recommender system. Let's see what movies it recommends to me. Hope they are not the same boring list of popular movies
+
+Check out detailed source code and instruction of commands (see the parse_args function) in [als_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/als_recommender.py)
+
+Run Alternating Least Square recommender system:
+```
+python src/als_recommender.py --movie_name "Iron Man" --top_n 10
+```
+
+Output:
+```
+Recommendation system start to make inference ...
+
+You have input movie: Iron Man
+Found possible matches in our database: ['Iron Man (2008)', 'Iron Man 2 (2010)', 'Invincible Iron Man, The (2007)', 'Iron Man: Rise Of Technovore (2013)', 'Iron Man 3 (2013)', 'Iron Man & Captain America: Heroes United (2014)', 'Iron Man & Hulk:Heroes United (2013)', 'Iron Man (1951)', 'Iron Man (1931)']
+
+Recommendations for Iron Man:
+1: Nine Deaths of the Ninja (1985), with rating of 6.5423
+2: Pearl Jam: Immagine in Cornice - Live in Italy 2006 (2007), with rating of 6.4800
+3: Presumed Guilty (Presunto culpable) (2008), with rating of 6.2537
+4: Summer Heights High (2007), with rating of 6.1016
+5: Dark Dungeons (2014), with rating of 6.0401
+6: Hillary's America: The Secret History Of The Democratic Party (2016), with rating of 6.0361
+7: Countdown (2004), with rating of 6.0336
+8: Heroes Above All (2017), with rating of 6.0326
+9: Stone Cold Steve Austin: The Bottom Line on the Most Popular Superstar of All Time (2011), with rating of 6.0006
+10: WWE: Ladies and Gentlemen, My Name Is Paul Heyman (2014), with rating of 5.9800
+```
+
+This new list of Movies are completely different from the list of KNN recommender, which is very interesting. I have never watch any one of movies from this new list. This new recommender is able to offer less-known movies to user and offer a bit of element of suprise too. We can potentially blend this list of recommendations into the previous list from KNN recommender so that this hybrid recommender can offer both popular and less-known content to users. 
+
 
 
 
