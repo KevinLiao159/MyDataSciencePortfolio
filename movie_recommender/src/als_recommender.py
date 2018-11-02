@@ -5,7 +5,7 @@ import gc
 
 # spark imports
 from pyspark.sql import SparkSession, Row
-from pyspark.sql.functions import col, lower, lit
+from pyspark.sql.functions import col, lower
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 
@@ -18,8 +18,10 @@ class AlsRecommender:
     def __init__(self, spark_session, path_movies, path_ratings):
         self.spark = spark_session
         self.sc = spark_session.sparkContext
-        self.moviesDF = self._load_file(path_movies)
-        self.ratingsDF = self._load_file(path_ratings)
+        self.moviesDF = self._load_file(path_movies) \
+            .select(['movieId', 'title'])
+        self.ratingsDF = self._load_file(path_ratings) \
+            .select(['userId', 'movieId', 'rating'])
         self.model = ALS(
             userCol='userId',
             itemCol='movieId',
@@ -100,7 +102,7 @@ class AlsRecommender:
                 ).like('%{}%'.format(fav_movie.lower()))
             ) \
             .select('movieId', 'title')
-        if matchesDF.head(1).isEmpty:
+        if not len(matchesDF.take(1)):
             print('Oops! No match is found')
         else:
             movieIds = matchesDF.rdd.map(lambda r: r[0]).collect()
@@ -131,7 +133,8 @@ class AlsRecommender:
             )
         )
         # transform rows to spark DF
-        userDF = self.spark.createDataFrame(user_rows)
+        userDF = self.spark.createDataFrame(user_rows) \
+            .select(self.ratingsDF.columns)
         # append to ratingsDF
         self.ratingsDF = self.ratingsDF.union(userDF)
 
@@ -140,10 +143,24 @@ class AlsRecommender:
         create a user with all movies except ones were rated for inferencing
         """
         # filter movies
-        return self.moviesDF \
+        other_movieIds = self.moviesDF \
             .filter(~col('movieId').isin(movieIds)) \
-            .withColumn('userId', lit(int(userId))) \
+            .select(['movieId']) \
+            .rdd.map(lambda r: r[0]) \
+            .collect()
+        # create inference rdd
+        inferenceRDD = self.sc.parallelize(
+            [(userId, movieId) for movieId in other_movieIds]
+        ).map(
+            lambda x: Row(
+                userId=int(x[0]),
+                movieId=int(x[1]),
+            )
+        )
+        # transform to inference DF
+        inferenceDF = self.spark.createDataFrame(inferenceRDD) \
             .select(['userId', 'movieId'])
+        return inferenceDF
 
     def _inference(self, model, fav_movie, n_recommendations):
         """
