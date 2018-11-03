@@ -20,9 +20,9 @@
   - [Topic Modeling on Medium BlogPost with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_pyspark.ipynb)
 
 - [Movie Recommender Systems](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender)
-  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_KNN.ipynb)
-  - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_ALS.ipynb)
-  - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/movie_recommendation_using_NeuMF.ipynb)
+  - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender/#movie-recommendation-engine-development-with-knn)
+  - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/#movie-recommendation-engine-development-with-als-in-apache-spark)
+  - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/#movie-recommendation-engine-development-with-neural-networks-in-keras)
 
 - [San Francisco Crime Study](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/sf_crime_study)
   - [San Francisco Crime Analysis with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/sf_crime_study/crimes_analysis_using_spark.ipynb)
