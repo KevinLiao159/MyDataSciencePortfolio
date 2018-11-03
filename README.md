@@ -19,7 +19,7 @@
   - [Topic Modeling on Medium BlogPost with Sklearn](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_sklearn.ipynb)
   - [Topic Modeling on Medium BlogPost with Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/medium_blogpost/topic_modeling_using_pyspark.ipynb)
 
-- [Movie Recommender Systems](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender)
+- [Movie Recommender Systems](#movie-recommender-systems)
   - [Movie Recommendation Engine Development with KNN](https://github.com/KevinLiao159/MyDataSciencePortfolio/tree/master/movie_recommender/#movie-recommendation-engine-development-with-knn)
   - [Movie Recommendation Engine Development with ALS in Apache Spark](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/#movie-recommendation-engine-development-with-als-in-apache-spark)
   - [Movie Recommendation Engine Development with Neural Networks in Keras](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/#movie-recommendation-engine-development-with-neural-networks-in-keras)
