@@ -338,11 +338,7 @@ if __name__ == '__main__':
     # initial spark
     spark = SparkSession \
         .builder \
-        .appName("movie recommendation") \
-        .config("spark.driver.maxResultSize", "96g") \
-        .config("spark.driver.memory", "96g") \
-        .config("spark.executor.memory", "8g") \
-        .config("spark.master", "local[12]") \
+        .appName("movie recommender") \
         .getOrCreate()
     # initial recommender system
     recommender = AlsRecommender(
@@ -353,3 +349,5 @@ if __name__ == '__main__':
     recommender.set_model_params(10, 0.05, 20)
     # make recommendations
     recommender.make_recommendations(movie_name, top_n)
+    # stop
+    spark.stop()

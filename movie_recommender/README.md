@@ -150,8 +150,9 @@ I will pretend a user and input my favorite movie "Iron Man" again into this new
 Check out detailed source code and instruction of commands (see the parse_args function) in [als_recommender.py](https://github.com/KevinLiao159/MyDataSciencePortfolio/blob/master/movie_recommender/src/als_recommender.py)
 
 Run Alternating Least Square recommender system:
+(Here I use spark-submit to deploy a local mode. You may use yarn-client deploy mode on AWS EMR)
 ```
-python src/als_recommender.py --movie_name "Iron Man" --top_n 10
+spark-submit --master local[4] --driver-memory 4g --executor-memory 8g als_recommender.py --movie_name "Iron Man" --top_n 10
 ```
 
 Output:
