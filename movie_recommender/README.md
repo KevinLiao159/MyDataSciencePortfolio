@@ -1,7 +1,7 @@
 <h1 align="center"> Movie Recommender Systems </h1> <br>
 <p align="center">
-  <a href="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395">
-    <img alt="Recommender Systems" title="Recommender Systems" src="https://s3.amazonaws.com/re-work-production/post_images/524/netflixf/original.png?1519061395">
+  <a href="https://image.slidesharecdn.com/recommendationsformlsoftwarepublic-151114003739-lva1-app6891/95/recommendations-for-building-machine-learning-software-6-638.jpg?cb=1447461571">
+    <img alt="Recommender Systems" title="Recommender Systems" src="https://image.slidesharecdn.com/recommendationsformlsoftwarepublic-151114003739-lva1-app6891/95/recommendations-for-building-machine-learning-software-6-638.jpg?cb=1447461571">
   </a>
 </p>
 
