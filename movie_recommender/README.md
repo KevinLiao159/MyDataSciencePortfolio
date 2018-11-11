@@ -152,7 +152,7 @@ Check out detailed source code and instruction of commands (see the parse_args f
 Run Alternating Least Square recommender system for Spark 2.0+:
 (Here I use spark-submit to deploy in local mode. You may use yarn-client deploy mode on AWS EMR)
 ```
-spark-submit --master local[4] --driver-memory 4g --executor-memory 8g als_recommender.py --movie_name "Iron Man" --top_n 10
+spark-submit --master local[4] --driver-memory 4g --executor-memory 8g src/als_recommender.py --movie_name "Iron Man" --top_n 10
 ```
 
 Output:
