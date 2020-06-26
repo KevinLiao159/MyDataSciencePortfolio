@@ -1,4 +1,7 @@
 <h1 align="center"> My Data Science Portfolio </h1> <br>
+
+Good news! Below is a new way to monetize your open source contribution in Github :point_down::point_down::raised_hands::raised_hands::v::v:
+
 <p align="center">
   <a href=“https://tracking.gitads.io/?repo=MyDataSciencePortfolio”><img src="https://images.gitads.io/MyDataSciencePortfolio" alt=“GitAds”/></a>
 </p>
