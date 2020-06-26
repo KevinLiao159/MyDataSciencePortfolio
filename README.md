@@ -1,8 +1,5 @@
 <h1 align="center"> My Data Science Portfolio </h1> <br>
 <p align="center">
-  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio">
-    <img alt="DataScience" title="DataScience" src="https://cdn-images-1.medium.com/max/1600/1*u16a0WbJeckSdi6kGD3gVA.jpeg" width="600" height="300">
-  </a>
   <a href=“https://tracking.gitads.io/?repo=MyDataSciencePortfolio”><img src="https://images.gitads.io/MyDataSciencePortfolio" alt=“GitAds”/></a>
 </p>
 
@@ -40,6 +37,13 @@
 - [Future Potential Projects](#future-potential-projects)
 - [Appendix](#appendix)
   - [Source Code](#source-code)
+
+
+<p align="center">
+  <a href="https://github.com/KevinLiao159/MyDataSciencePortfolio">
+    <img alt="DataScience" title="DataScience" src="https://cdn-images-1.medium.com/max/1600/1*u16a0WbJeckSdi6kGD3gVA.jpeg" width="600" height="300">
+  </a>
+</p>
 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
