@@ -1,6 +1,6 @@
 <h1 align="center"> My Data Science Portfolio </h1> <br>
 
-Good news! Below is a new way to monetize your open source contribution in Github :point_down::point_down::v::v:
+MyDataSciencePortfolio is being sponsored by the following tool. Please help to support us by taking a look and signing up to a free trial :point_down::point_down::v::v:
 
 <p align="center">
   <a href=“https://tracking.gitads.io/?repo=MyDataSciencePortfolio”><img src="https://images.gitads.io/MyDataSciencePortfolio" alt=“GitAds”/></a>
